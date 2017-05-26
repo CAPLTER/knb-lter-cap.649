@@ -32,6 +32,7 @@ library('tidyverse')
 library("tools")
 library("readr")
 library("readxl")
+library("magrittr")
 
 # reml-helper-functions ----
 # source('~/localRepos/reml-helper-tools/createdataTableFn.R')
@@ -45,6 +46,8 @@ source('~/localRepos/reml-helper-tools/createFactorsDataframe.R')
 
 # DB connections ----
 
+source('~/Documents/localSettings/pg_prod.R')
+  
 # dataset details to set first ----
 projectid <- 649
 packageIdent <- 'knb-lter-cap.649.1'
@@ -52,39 +55,75 @@ pubDate <- '2017-05-31'
 
 # data entity ----
 
+# CR1000_EC
+OPEC <- dbGetQuery(pg_prod, '
 SELECT 
-ec.date_time,
---ec.record,
---ec.measurement_id,
-m.observation,
-ec.value
+  ec.date_time,
+  --ec.record,
+  --ec.measurement_id,
+  m.observation,
+  ec.value
 FROM fluxtower.cr1000ec ec
-JOIN fluxtower.measurements m ON (ec.measurement_id = measurements.id)
-ORDER BY ec.measurement_id, ec.date_time;
+JOIN fluxtower.measurements m ON (ec.measurement_id = m.id)
+ORDER BY ec.measurement_id, ec.date_time;')
 
-# data processing
-# data_frame_name[data_frame_name == ''] <- NA
+OPEC %<>% 
+  spread(key = observation, value = value)
 
-# see comments in createdataTableFn.R for doing this piece-by-piece outside of functions
-
-writeAttributes(dataframe) # write data frame attributes to a csv in current dir to edit metadata
-dataframe_desc <- "dataframe description"
-
-# address factors if needed
-reach <- c(Tonto = "Salt River, Tonto National Forest, near Usery Road",
-           BM = "Baseline and Meridian Wildlife Area")
-urbanized <- c(urban = "in urban area",
-               NonUrban = "outside urban area")
-restored <- c(Restored = "site received active restoration",
-              NotRestored = "site has not been restored")
-
-dataframe_factors <- factorsToFrame(dataframe)
+writeAttributes(OPEC) # write data frame attributes to a csv in current dir to edit metadata
+OPEC_desc <- "this file contains Open Path Eddy Covariance (OPEC) data, inlcuding gas analyzer, 3D sonic anemometer, and temperature and relative humidity sensor data measured at the the CAP LTER flux tower located in the west Phoenix, AZ neighborhood of Maryvale"
 
 # create data table based on metadata provided in the companion csv
 # use createdataTableFn() if attributes and classes are to be passed directly
-dataframe_DT <- createDTFF(dfname = dataframe,
-                           # factors = dataframe_factors,
-                           description = dataframe_desc)
+OPEC_DT <- createDTFF(dfname = OPEC,
+                      description = OPEC_desc)
+
+# CR23X
+radiometer_rain <- dbGetQuery(pg_prod, '
+SELECT 
+  cr23x.date_time,
+  --ec.record,
+  --ec.measurement_id,
+  m.observation,
+  cr23x.value
+FROM fluxtower.cr23x
+JOIN fluxtower.measurements m ON (cr23x.measurement_id = m.id)
+ORDER BY cr23x.measurement_id, cr23x.date_time;')
+
+radiometer_rain %<>% 
+  spread(key = observation, value = value)
+
+writeAttributes(radiometer_rain) # write data frame attributes to a csv in current dir to edit metadata
+radiometer_rain_desc <- "this file contains radiometer and rain gauge (30-minute averages) data measured at the the CAP LTER flux tower located in the west Phoenix, AZ neighborhood of Maryvale"
+
+# create data table based on metadata provided in the companion csv
+# use createdataTableFn() if attributes and classes are to be passed directly
+OPEC_DT <- createDTFF(dfname = radiometer_rain,
+                      description = radiometer_rain_desc)
+
+
+# CR1000_Soil
+groundSensors <- dbGetQuery(pg_prod, '
+SELECT 
+  cr1000soil.date_time,
+  --ec.record,
+  --ec.measurement_id,
+  m.observation,
+  cr1000soil.value
+FROM fluxtower.cr1000soil
+JOIN fluxtower.measurements m ON (cr1000soil.measurement_id = m.id)
+ORDER BY cr1000soil.measurement_id, cr1000soil.date_time;')
+
+groundSensors %<>% 
+  spread(key = observation, value = value)
+
+writeAttributes(groundSensors) # write data frame attributes to a csv in current dir to edit metadata
+groundSensors_desc <- "this file contains data (30-minute averages) from 3 soil moisture sensors, 4 soil temperature probes, and 2 heat flux plates buried at multiple depths at the the CAP LTER flux tower located in the west Phoenix, AZ neighborhood of Maryvale"
+
+# create data table based on metadata provided in the companion csv
+# use createdataTableFn() if attributes and classes are to be passed directly
+OPEC_DT <- createDTFF(dfname = radiometer_rain,
+                      description = radiometer_rain_desc)
 
 
 # title and abstract ----
@@ -237,3 +276,67 @@ eml <- new("eml",
 
 # write the xml to file ----
 write_eml(eml, "out.xml")
+
+# use Tom's metadata to populate attr files (a one-time need) ----
+# get Tom's descriptions from the database
+analytes <- dbGetQuery(pg_prod, 'SELECT * FROM fluxtower.measurements;')
+
+# read in the CR100_EC attrs producted by the modified writeAttributesFn and merge with Tom's
+ecattrs <- read_csv('OPEC_attrs.csv')
+ecattrs %<>%
+  left_join(analytes[,c("observation", "units", "decscription")], by = c("attributeName" = "observation")) %>% 
+  mutate(missingValueCode = replace(missingValueCode, !is.na(missingValueCodeExplanation), "NA")) %>% 
+  select(-attributeDefinition,
+         -unit) %>% 
+  select(attributeName,
+         formatString,
+         unit = units,
+         numberType,
+         definition,
+         attributeDefinition = decscription,
+         columnClasses,
+         missingValueCode,
+         missingValueCodeExplanation)
+
+write_csv(ecattrs, 'OPEC_attrs.csv', na = "")
+
+(meters * celsius)/second
+
+# read in the CR23X attrs producted by the modified writeAttributesFn and merge with Tom's
+cr23xattrs <- read_csv('radiometer_rain_attrs.csv')
+cr23xattrs %<>%
+  left_join(analytes[,c("observation", "units", "decscription")], by = c("attributeName" = "observation")) %>% 
+  mutate(missingValueCode = replace(missingValueCode, !is.na(missingValueCodeExplanation), "NA")) %>% 
+  select(-attributeDefinition,
+         -unit) %>% 
+  select(attributeName,
+         formatString,
+         unit = units,
+         numberType,
+         definition,
+         attributeDefinition = decscription,
+         columnClasses,
+         missingValueCode,
+         missingValueCodeExplanation)
+
+write_csv(cr23xattrs, 'radiometer_rain_attrs.csv', na = "")
+
+# read in the CR1000_Soil attrs producted by the modified writeAttributesFn and merge with Tom's
+soil_attrs <- read_csv('groundSensors_attrs.csv')
+soil_attrs %<>%
+  left_join(analytes[,c("observation", "units", "decscription")], by = c("attributeName" = "observation")) %>% 
+  mutate(missingValueCode = replace(missingValueCode, !is.na(missingValueCodeExplanation), "NA")) %>% 
+  select(-attributeDefinition,
+         -unit) %>% 
+  select(attributeName,
+         formatString,
+         unit = units,
+         numberType,
+         definition,
+         attributeDefinition = decscription,
+         columnClasses,
+         missingValueCode,
+         missingValueCodeExplanation)
+
+write_csv(soil_attrs, 'groundSensors_attrs.csv', na = "")
+
