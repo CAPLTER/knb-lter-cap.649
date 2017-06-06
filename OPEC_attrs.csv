@@ -1,61 +1,61 @@
 attributeName,formatString,unit,numberType,definition,attributeDefinition,columnClasses,missingValueCode,missingValueCodeExplanation
 date_time,YYYY-MM-DD hh:mm:ss,,,,observation date and time,Date,,
-agc_Avg,,dimensionless,real,,automatic gain control,numeric,NA,missing value
+agc_Avg,,dimensionless,real,,automatic gain control,numeric,"""NA""",missing value
 amp_h_f_Tot,,number,real,,number of samples with amplitude high flags,numeric,,
 amp_l_f_Tot,,number,real,,number of samples with amplitude low flags,numeric,,
-batt_volt_Avg,,volt,real,,battery voltage,numeric,NA,missing value
+batt_volt_Avg,,volt,real,,battery voltage,numeric,"""NA""",missing value
 chopper_f_Tot,,number,real,,number of samples with chopper warning flags,numeric,,
-co2_mean,,milligramsPerCubicMeter,real,,average CO2 concentration,numeric,NA,missing value
-co2_wpl_H,,milligramsPerMeterSquaredPerSecond,real,,Webb correction term for CO2 flux due to sensible heat flux,numeric,NA,missing value
-co2_wpl_LE,,milligramsPerMeterSquaredPerSecond,real,,Webb correction term for CO2 flux due to latent heat flux,numeric,NA,missing value
-cov_co2_Ux,,milligramsPerMeterSquaredPerSecond,real,,covariance: co2 and Ux,numeric,NA,missing value
-cov_co2_Uy,,milligramsPerMeterSquaredPerSecond,real,,covariance: co2 and Uy,numeric,NA,missing value
-cov_co2_Uz,,milligramsPerMeterSquaredPerSecond,real,,covariance: co2 and Uz,numeric,NA,missing value
-cov_h2o_Ux,,gramsPerMeterSquaredPerSecond,real,,covariance: h2o and Ux,numeric,NA,missing value
-cov_h2o_Uy,,gramsPerMeterSquaredPerSecond,real,,covariance: h2o and Uy,numeric,NA,missing value
-cov_h2o_Uz,,gramsPerMeterSquaredPerSecond,real,,covariance: h2o and Uz,numeric,NA,missing value
-cov_Ts_Ux,what is this?,m°C/s,real,,covariance: Ts and Ux,numeric,NA,missing value
-cov_Ts_Uy,what is this?,m °C/s,real,,covariance: Ts and Uy,numeric,NA,missing value
-cov_Ts_Uz,what is this?,m °C/s,real,,covariance: Ts and Uz,numeric,NA,missing value
-cov_Ux_Uy,,meterSquaredPerSecondSquared,real,,covariance: Ux and Uy,numeric,NA,missing value
-cov_Ux_Uz,,meterSquaredPerSecondSquared,real,,covariance: Ux and Uz,numeric,NA,missing value
-cov_Uy_Uz,,meterSquaredPerSecondSquared,real,,covariance: Uy and Uz,numeric,NA,missing value
+co2_mean,,milligramsPerCubicMeter,real,,average CO2 concentration,numeric,"""NA""",missing value
+co2_wpl_H,,milligramsPerMeterSquaredPerSecond,real,,Webb correction term for CO2 flux due to sensible heat flux,numeric,"""NA""",missing value
+co2_wpl_LE,,milligramsPerMeterSquaredPerSecond,real,,Webb correction term for CO2 flux due to latent heat flux,numeric,"""NA""",missing value
+cov_co2_Ux,,milligramsPerMeterSquaredPerSecond,real,,covariance: co2 and Ux,numeric,"""NA""",missing value
+cov_co2_Uy,,milligramsPerMeterSquaredPerSecond,real,,covariance: co2 and Uy,numeric,"""NA""",missing value
+cov_co2_Uz,,milligramsPerMeterSquaredPerSecond,real,,covariance: co2 and Uz,numeric,"""NA""",missing value
+cov_h2o_Ux,,gramsPerMeterSquaredPerSecond,real,,covariance: h2o and Ux,numeric,"""NA""",missing value
+cov_h2o_Uy,,gramsPerMeterSquaredPerSecond,real,,covariance: h2o and Uy,numeric,"""NA""",missing value
+cov_h2o_Uz,,gramsPerMeterSquaredPerSecond,real,,covariance: h2o and Uz,numeric,"""NA""",missing value
+cov_Ts_Ux,,meterCelsiusPerSecond,real,,covariance: Ts and Ux,numeric,"""NA""",missing value
+cov_Ts_Uy,,meterCelsiusPerSecond,real,,covariance: Ts and Uy,numeric,"""NA""",missing value
+cov_Ts_Uz,,meterCelsiusPerSecond,real,,covariance: Ts and Uz,numeric,"""NA""",missing value
+cov_Ux_Uy,,meterSquaredPerSecondSquared,real,,covariance: Ux and Uy,numeric,"""NA""",missing value
+cov_Ux_Uz,,meterSquaredPerSecondSquared,real,,covariance: Ux and Uz,numeric,"""NA""",missing value
+cov_Uy_Uz,,meterSquaredPerSecondSquared,real,,covariance: Uy and Uz,numeric,"""NA""",missing value
 csat_warnings,,number,real,,number of samples with CSAT flags,numeric,,
 del_T_f_Tot,,number,real,,number of samples with delta temperature flags,numeric,,
 detector_f_Tot,,number,real,,number of samples with detector warning flags,numeric,,
-Fc_irga,,milligramsPerMeterSquaredPerSecond,real,,CO2 flux without Webb correction term,numeric,NA,missing value
-Fc_wpl,,milligramsPerMeterSquaredPerSecond,real,,CO2 flux with Webb correction term,numeric,NA,missing value
-h2o_Avg,,gramPerMeterCubed,real,,average H2O concentration (IRGA),numeric,NA,missing value
-h2o_hmp_mean,,gramPerMeterCubed,real,,mean vapor density from T/RH sensor,numeric,NA,missing value
-h2o_wpl_H,,wattPerMeterSquared,real,,Webb correction term for H2O flux due to sensible heat flux,numeric,NA,missing value
-h2o_wpl_LE,,wattPerMeterSquared,real,,Webb correction term for H2O flux due to latent heat flux,numeric,NA,missing value
-Hc,,wattPerMeterSquared,real,,Sensible heat flux computed from Hs and LE_wpl,numeric,NA,missing value
-Hs,,wattPerMeterSquared,real,,Sensible heat flux using sonic temperature,numeric,NA,missing value
+Fc_irga,,milligramsPerMeterSquaredPerSecond,real,,CO2 flux without Webb correction term,numeric,"""NA""",missing value
+Fc_wpl,,milligramsPerMeterSquaredPerSecond,real,,CO2 flux with Webb correction term,numeric,"""NA""",missing value
+h2o_Avg,,gramPerMeterCubed,real,,average H2O concentration (IRGA),numeric,"""NA""",missing value
+h2o_hmp_mean,,gramPerMeterCubed,real,,mean vapor density from T/RH sensor,numeric,"""NA""",missing value
+h2o_wpl_H,,wattPerMeterSquared,real,,Webb correction term for H2O flux due to sensible heat flux,numeric,"""NA""",missing value
+h2o_wpl_LE,,wattPerMeterSquared,real,,Webb correction term for H2O flux due to latent heat flux,numeric,"""NA""",missing value
+Hc,,wattPerMeterSquared,real,,Sensible heat flux computed from Hs and LE_wpl,numeric,"""NA""",missing value
+Hs,,wattPerMeterSquared,real,,Sensible heat flux using sonic temperature,numeric,"""NA""",missing value
 irga_warnings,,number,real,,number of samples with IRGA flags,numeric,,
-LE_irga,,wattPerMeterSquared,real,,latent heat flux without Webb correction term,numeric,NA,missing value
-LE_wpl,,wattPerMeterSquared,real,,Latent heat flux with Webb correction term,numeric,NA,missing value
+LE_irga,,wattPerMeterSquared,real,,latent heat flux without Webb correction term,numeric,"""NA""",missing value
+LE_wpl,,wattPerMeterSquared,real,,Latent heat flux with Webb correction term,numeric,"""NA""",missing value
 n_Tot,,number,real,,number of samples in averaging period,numeric,,
-panel_temp_Avg,,celsius,real,,datalogger panel temperature,numeric,NA,missing value
+panel_temp_Avg,,celsius,real,,datalogger panel temperature,numeric,"""NA""",missing value
 pll_f_Tot,,number,real,,number of samples with PLL warning flags,numeric,,
-press_mean,,kilopascal,real,,mean air pressure,numeric,NA,missing value
-rho_a_mean,,kilogramPerCubicMeter,real,,mean air density,numeric,NA,missing value
-rslt_wnd_spd,,metersPerSecond,real,,average wind speed in compass coordinate system,numeric,NA,missing value
+press_mean,,kilopascal,real,,mean air pressure,numeric,"""NA""",missing value
+rho_a_mean,,kilogramPerCubicMeter,real,,mean air density,numeric,"""NA""",missing value
+rslt_wnd_spd,,metersPerSecond,real,,average wind speed in compass coordinate system,numeric,"""NA""",missing value
 sig_lck_f_Tot,,number,real,,number of samples with poor signal lock flags,numeric,,
-stdev_co2,,milligramsPerCubicMeter,real,,standard deviation of CO2 concentration,numeric,NA,missing value
-stdev_h2o,,gramPerMeterCubed,real,,standard deviation of H2O concentration,numeric,NA,missing value
-stdev_Ts,,celsius,real,,standard deviation of Ts,numeric,NA,missing value
-stdev_Ux,,metersPerSecond,real,,standard deviation of E  W wind speed,numeric,NA,missing value
-stdev_Uy,,metersPerSecond,real,,standard deviation of N  S wind speed,numeric,NA,missing value
-stdev_Uz,,metersPerSecond,real,,standard deviation of upward wind speed,numeric,NA,missing value
-std_wnd_dir,,degree,real,,standard deviation of wind direction in compass coordinate system,numeric,NA,missing value
+stdev_co2,,milligramsPerCubicMeter,real,,standard deviation of CO2 concentration,numeric,"""NA""",missing value
+stdev_h2o,,gramPerMeterCubed,real,,standard deviation of H2O concentration,numeric,"""NA""",missing value
+stdev_Ts,,celsius,real,,standard deviation of Ts,numeric,"""NA""",missing value
+stdev_Ux,,metersPerSecond,real,,standard deviation of E  W wind speed,numeric,"""NA""",missing value
+stdev_Uy,,metersPerSecond,real,,standard deviation of N  S wind speed,numeric,"""NA""",missing value
+stdev_Uz,,metersPerSecond,real,,standard deviation of upward wind speed,numeric,"""NA""",missing value
+std_wnd_dir,,degree,real,,standard deviation of wind direction in compass coordinate system,numeric,"""NA""",missing value
 sync_f_Tot,,number,real,,number of samples with synchronization flags,numeric,,
-tau,,pascal,real,,momentum flux,numeric,NA,missing value
-t_hmp_mean,,celsius,real,,mean air temperature from T/RH sensor,numeric,NA,missing value
-Ts_mean,,celsius,real,,average virtual temperature from anemometer,numeric,NA,missing value
-u_star,,metersPerSecond,real,,friction velocity,numeric,NA,missing value
-Ux_Avg,,metersPerSecond,real,,average E  W wind speed,numeric,NA,missing value
-Uy_Avg,,metersPerSecond,real,,average N  S wind speed,numeric,NA,missing value
-Uz_Avg,,metersPerSecond,real,,average upward wind speed,numeric,NA,missing value
-wnd_dir_compass,,degree,real,,wind direction (compass) corrected for azimuth,numeric,NA,missing value
-wnd_dir_csat3,,degree,real,,wind direction with reference to CSAT field of view,numeric,NA,missing value
-wnd_spd,,metersPerSecond,real,,mean wind speed,numeric,NA,missing value
+tau,,pascal,real,,momentum flux,numeric,"""NA""",missing value
+t_hmp_mean,,celsius,real,,mean air temperature from T/RH sensor,numeric,"""NA""",missing value
+Ts_mean,,celsius,real,,average virtual temperature from anemometer,numeric,"""NA""",missing value
+u_star,,metersPerSecond,real,,friction velocity,numeric,"""NA""",missing value
+Ux_Avg,,metersPerSecond,real,,average E  W wind speed,numeric,"""NA""",missing value
+Uy_Avg,,metersPerSecond,real,,average N  S wind speed,numeric,"""NA""",missing value
+Uz_Avg,,metersPerSecond,real,,average upward wind speed,numeric,"""NA""",missing value
+wnd_dir_compass,,degree,real,,wind direction (compass) corrected for azimuth,numeric,"""NA""",missing value
+wnd_dir_csat3,,degree,real,,wind direction with reference to CSAT field of view,numeric,"""NA""",missing value
+wnd_spd,,metersPerSecond,real,,mean wind speed,numeric,"""NA""",missing value

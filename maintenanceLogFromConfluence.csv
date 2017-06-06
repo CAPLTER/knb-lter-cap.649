@@ -1,0 +1,55 @@
+date,action
+2014-10-02,10 Hz data retrieval
+2014-10-22,"10 Hz data retrieval;
+unable to access radiometers this visit now overdue"
+2014-11-25,"10 Hz data retrieval;
+cleaned radiometers;
+HMP fell out of its housing while raising - not addressed!"
+2014-11-26,HMP reinserted into sleeve on tower
+2014-12-22,data retrieval; rewired HMP45
+2015-01-21,data retrieval; rewired HMP45; cleaned radiometers
+2015-02-21,data retrieval; cleaned radiometers
+2015-03-22,data retrieval
+2015-04-22,data retrieval; cleaned radiometers
+2015-05-22,"data retrieval, cables had come loose and were tangled in fence"
+2015-06-22,data retrieval
+2015-07-15,HC2S3 probe purchased to replace HMP45C
+2015-07-23,data retrieval
+2015-08-07,"cleaned radiometers, tried trouble shooting error messages, everything looked normal"
+2015-08-22,data retrieval
+2015-09-22,data retrieval
+2015-10-25,data retrieval
+2015-11-13,Licor LI-7500 calibrated
+2015-11-17,"reinstalled calibrated instrument, cleaned radiometers"
+2015-11-25,data retrieval
+2015-12-22,data retrieval
+2016-01-22,data retrieval
+2016-02-22,data retrieval
+2016-03-04,cleaned radiometers
+2016-03-22,data retrieval
+2016-04-23,data retrieval
+2016-05-02,"cables between data logger and soil sensors cut, as well as cable to the HC2S3 probe"
+2016-05-05,dug up soil sensors
+2016-05-22,data retrieval 7:20pm
+2016-05-26,tower cranked down at 6pm
+2016-05-27,"HC2S3 cable replaced, tower cranked up at 9am, discovered that one of the cables from the NR01 net radiometer had been disconnected (possible during prior vandalism)"
+2016-06-22,data retrieval
+2016-07-22,cleaned radiometers
+2016-07-26,data retrieval 
+2016-08-22,data retrieval
+2016-09-22,data retrieval 2:08pm
+2016-10-21,"sonic anemometer and radiometer removed from the flux tower to be sent in for calibration next week.  The IRGA and Temperature and Relative humidity probe (HC2SC) are still attached, but we left the tower cranked down, so they are measuring at a lower elevation (if that matters)"
+2016-10-21,data retrieval 12:10pm
+2016-11-07,copied program from CR23X_PB prior to removing CR23X_PB and CR1000 data loggers for shipping and calibration
+2016-11-18,Licor LI7500 removed from tower for calibration
+2016-12-09,Licor LI7500 reinstalled on tower
+2016-12-11,CR23X_PB and CR1000(program uploaded) data loggers reinstalled and wired. 
+2017-01-24,"Re-installed the CSAT 3d sonic anemometer, and net radiometer"
+2017-01-26,re wired the net radiometer to CR23X_PB
+2017-01-30,CR23x_pb program uploaded by Eli at ~14:00
+2017-01-31,data retrieval
+2017-02-06,4WPB100 Terminal Input Module installed on CR23X_PB and tower raised
+2017-02-28,data retrieval
+2017-03-31,data retrieval. wires were loose due to wind. need to buy more Velcro straps
+2017-05-02,data retrieval
+2017-05-30,data retrieval

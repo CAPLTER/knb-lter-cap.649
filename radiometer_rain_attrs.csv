@@ -1,5 +1,5 @@
 attributeName,formatString,unit,numberType,definition,attributeDefinition,columnClasses,missingValueCode,missingValueCodeExplanation
-date_time,YYYY-MM-DD hh:mm:ss,,,,,Date,,
+date_time,YYYY-MM-DD hh:mm:ss,,,,observation date and time,Date,,
 Albedo_AVG,,dimensionless,real,,shortwave surface albedo,numeric,,
 IR01_dn_4_AVG,,wattPerMeterSquared,real,,downwelling longwave (infrared) radiation,numeric,,
 IR01dnCor_AVG,,wattPerMeterSquared,real,,downwelling longwave radiation corrected for Boltzmann radiation from sensor,numeric,,
@@ -8,7 +8,7 @@ IR01upCor_AVG,,wattPerMeterSquared,real,,upwelling longwave radiation corrected 
 Net_RI_AVG,,wattPerMeterSquared,real,,net longwave (infrared) radiation,numeric,,
 Net_Rs_AVG,,wattPerMeterSquared,real,,net shortwave radiation,numeric,,
 Net_total_AVG,,wattPerMeterSquared,real,,net total radiation,numeric,,
-Rain_mm_TOT,,millimeter,real,,total rainfall for 30 min period,numeric,NA,missing value
+Rain_mm_TOT,,millimeter,real,,total rainfall for 30 min period,numeric,"""NA”",missing value
 SR01_dn_2_AVG,,wattPerMeterSquared,real,,downwelling shortwave radiation,numeric,,
 SR01_up_1_AVG,,wattPerMeterSquared,real,,upwelling shortwave radiation,numeric,,
 Temp_c_AVG,,celsius,real,,sensor temperature,numeric,,

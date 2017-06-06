@@ -47,11 +47,12 @@ source('~/localRepos/reml-helper-tools/createFactorsDataframe.R')
 # DB connections ----
 
 source('~/Documents/localSettings/pg_prod.R')
+source('~/Documents/localSettings/mysql_prod.R')
   
 # dataset details to set first ----
 projectid <- 649
 packageIdent <- 'knb-lter-cap.649.1'
-pubDate <- '2017-05-31'
+pubDate <- '2017-06-06'
 
 # data entity ----
 
@@ -71,7 +72,7 @@ OPEC %<>%
   spread(key = observation, value = value)
 
 writeAttributes(OPEC) # write data frame attributes to a csv in current dir to edit metadata
-OPEC_desc <- "this file contains Open Path Eddy Covariance (OPEC) data, inlcuding gas analyzer, 3D sonic anemometer, and temperature and relative humidity sensor data measured at the the CAP LTER flux tower located in the west Phoenix, AZ neighborhood of Maryvale"
+OPEC_desc <- "Open Path Eddy Covariance (OPEC) data, inlcuding gas analyzer, 3D sonic anemometer, and temperature and relative humidity sensor data measured at the CAP LTER flux tower located in the west Phoenix, AZ neighborhood of Maryvale"
 
 # create data table based on metadata provided in the companion csv
 # use createdataTableFn() if attributes and classes are to be passed directly
@@ -94,12 +95,12 @@ radiometer_rain %<>%
   spread(key = observation, value = value)
 
 writeAttributes(radiometer_rain) # write data frame attributes to a csv in current dir to edit metadata
-radiometer_rain_desc <- "this file contains radiometer and rain gauge (30-minute averages) data measured at the the CAP LTER flux tower located in the west Phoenix, AZ neighborhood of Maryvale"
+radiometer_rain_desc <- "radiometer and rain gauge (30-minute averages) data measured at the CAP LTER flux tower located in the west Phoenix, AZ neighborhood of Maryvale"
 
 # create data table based on metadata provided in the companion csv
 # use createdataTableFn() if attributes and classes are to be passed directly
-OPEC_DT <- createDTFF(dfname = radiometer_rain,
-                      description = radiometer_rain_desc)
+radiometer_rain_DT <- createDTFF(dfname = radiometer_rain,
+                                 description = radiometer_rain_desc)
 
 
 # CR1000_Soil
@@ -118,41 +119,50 @@ groundSensors %<>%
   spread(key = observation, value = value)
 
 writeAttributes(groundSensors) # write data frame attributes to a csv in current dir to edit metadata
-groundSensors_desc <- "this file contains data (30-minute averages) from 3 soil moisture sensors, 4 soil temperature probes, and 2 heat flux plates buried at multiple depths at the the CAP LTER flux tower located in the west Phoenix, AZ neighborhood of Maryvale"
+groundSensors_desc <- "data (30-minute averages) from 3 soil moisture sensors, 4 soil temperature probes, and 2 heat flux plates buried at multiple depths at the CAP LTER flux tower located in the west Phoenix, AZ neighborhood of Maryvale"
 
 # create data table based on metadata provided in the companion csv
 # use createdataTableFn() if attributes and classes are to be passed directly
-OPEC_DT <- createDTFF(dfname = radiometer_rain,
-                      description = radiometer_rain_desc)
+groundSensors_DT <- createDTFF(dfname = groundSensors,
+                               description = groundSensors_desc)
 
+
+# maintenance log
+# log exported (or, maybe, copied) from confluence
+maintenance_log <- read_csv('maintenanceLogFromConfluence.csv')
+
+writeAttributesEx(maintenance_log) # write data frame attributes to a csv in current dir to edit metadata
+maintenance_log_desc <- "log of maintenance activity at the CAP LTER flux tower located in the west Phoenix, AZ neighborhood of Maryvale"
+
+# create data table based on metadata provided in the companion csv
+# use createdataTableFn() if attributes and classes are to be passed directly
+maintenance_log_DT <- createDTFF(dfname = maintenance_log,
+                                 description = maintenance_log_desc)
 
 # title and abstract ----
-title <- 'title of data set'
+title <- 'Long-term monitoring of micrometeorological conditions at the CAP LTER flux tower located in the west Phoenix, AZ neighborhood of Maryvale, ongoing since 2010'
 
 # abstract from file or directly as text
-abstract <- as(set_TextType("abstract_as_md_file.md"), "abstract") 
-abstract <- 'abstract text'
+# abstract <- as(set_TextType("abstract_as_md_file.md"), "abstract") 
+abstract <- 'The CAP LTER maintains a 23 m urban eddy flux tower in the west Phoenix, AZ neighborhood of Maryvale (-112.1426 W, +33.4838 N). The tower is instrumented for long-term measurement of the covariance of turbulent eddy and radiative fluxes for the purposes of urban micrometeorological research. Additional micrometerological parameters, such as precipitation, are also measured. Select soil parameters were measured from 2012 through 2016. Eddy covariance data are collected and stored at two temporal resolutions: 10 Hz and 30-minute averages. Data presented here includes only 30-minute averages. Owing to large volumes, 10 Hz data are avialable only by request to the CAP LTER Information Manager (caplter.data@asu.edu).'
 
 
 # people ----
 
-nancyGrimm <- addCreator('n', 'grimm')
+winstonChow <- addCreator('w', 'chow')
 danChilders <- addCreator('d', 'childers')
-stanFaeth <- addAssocParty('s', 'faeth', 'Former Associate of Study')
-markHostetler <- addAssocParty('m', 'hostetler', 'Former Associate of Study')
-nancyMcintyre <- addAssocParty('n', 'mcintyre', 'Former Associate of Study')
-eyalShochat <- addAssocParty('e', 'shochat', 'Former Associate of Study')
-stevanEarl <- addMetadataProvider('s', 'earl')
 
-creators <- c(as(nancyGrimm, 'creator'),
+creators <- c(as(winstonChow, 'creator'),
               as(danChilders, 'creator'))
 
-metadataProvider <-c(as(stevanEarl, 'metadataProvider'))
+stevanEarl <- addMetadataProvider('s', 'earl')
+winstonChow <- addMetadataProvider('w', 'chow')
+tomVolo <- addMetadataProvider('t', 'volo')
 
-associatedParty <- c(as(stanFaeth, 'associatedParty'),
-                     as(markHostetler, 'associatedParty'),
-                     as(nancyMcintyre, 'associatedParty'),
-                     as(eyalShochat, 'associatedParty'))
+metadataProvider <-c(as(winstonChow, 'metadataProvider'),
+                     as(tomVolo, 'metadataProvider'),
+                     as(stevanEarl, 'metadataProvider'))
+
 
 # keywords ----
 
@@ -163,15 +173,18 @@ keywordSet <-
   c(new("keywordSet",
         keywordThesaurus = "LTER controlled vocabulary",
         keyword =  c("urban",
-                     "dissolved organic carbon",
-                     "total dissolved nitrogen")),
+                     "eddy covariance",
+                     "weather",
+                     "evaporation",
+                     "climate")),
     new("keywordSet",
         keywordThesaurus = "LTER core areas",
-        keyword =  c("disturbance patterns",
-                     "movement of inorganic matter")),
+        keyword =  c("climate and heat",
+                     "land use and land cover change",
+                     "human-environment interactions")),
     new("keywordSet",
         keywordThesaurus = "Creator Defined Keyword Set",
-        keyword =  c("unlisted stuff",
+        keyword =  c("surface energy balance",
                      "unlisted stuff")),
     new("keywordSet",
         keywordThesaurus = "CAPLTER Keyword Set List",
@@ -185,22 +198,20 @@ keywordSet <-
     )
 
 # methods and coverages ----
-methods <- set_methods("methods_as_md_file.md")
+methods <- set_methods("flux_tower_methods.md")
 
 # if relevant, pulling dates from a DB is nice
 # begindate <- dbGetQuery(con, "SELECT MIN(sample_date) AS date FROM database.table;")
 # begindate <- begindate$date
 
-begindate <- "2005-11-05"
-enddate <- "2015-12-15"
+begindate <- "2010-09-01"
+enddate <- "2017-05-30"
 geographicDescription <- "CAP LTER study area"
 coverage <- set_coverage(begin = begindate,
                          end = enddate,
-                         sci_names = c("Salix spp",
-                                       "Ambrosia deltoidea"),
                          geographicDescription = geographicDescription,
-                         west = -111.949, east = -111.910,
-                         north = +33.437, south = +33.430)
+                         west = -112.1426, east = -112.1426,
+                         north = +33.4838, south = +33.4838)
 
 # construct the dataset ----
 
@@ -227,8 +238,10 @@ dataset <- new("dataset",
                contact = contact,
                methods = methods,
                distribution = metadata_dist,
-               dataTable = c(first_DT,
-                             second_DT))
+               dataTable = c(OPEC_DT,
+                             radiometer_rain_DT,
+                             groundSensors_DT,
+                             maintenance_log_DT))
                # otherEntity = c(core_arthropod_locations)) # if other entity is relevant
 
 # ls(pattern= "_DT") # can help to pull out DTs
@@ -254,16 +267,36 @@ lter_access <- new("access",
 # unique(standardUnits$unitTypes$id) # unique unit types
 
 custom_units <- rbind(
-  data.frame(id = "microsiemenPerCentimeter",
-             unitType = "conductance",
-             parentSI = "siemen",
+  data.frame(id = "wattPerMeterSquared",
+             unitType = "irradiance",
+             parentSI = "wattPerMeterSquared",
+             multiplierToSI = 1,
+             description = "radiant flux received by a surface per unit area"),
+  data.frame(id = "gramPerMeterCubed",
+             unitType = "density",
+             parentSI = "kilogramPerCubicMeter",
+             multiplierToSI = 0.001,
+             description = "mass in grams divided by volume in cubic meters"),
+  data.frame(id = "milligramsPerMeterSquaredPerSecond",
+             unitType = "arealMassDensityRate",
+             parentSI = "kilogramsPerMeterSquaredPerSecond",
              multiplierToSI = 0.000001,
-             description = "electric conductance of lake water in the units of microsiemenPerCentimeter"),
-data.frame(id = "nephelometricTurbidityUnit",
-           unitType = "unknown",
-           parentSI = "unknown",
-           multiplierToSI = 1,
-           description = "(NTU) ratio of the amount of light transmitted straight through a water sample with the amount scattered at an angle of 90 degrees to one side"))
+             description = "rate of mass flow per unit area in units of milligrams per meter squared per second"),
+  data.frame(id = "gramsPerMeterSquaredPerSecond",
+             unitType = "arealMassDensityRate",
+             parentSI = "kilogramsPerMeterSquaredPerSecond",
+             multiplierToSI = 0.001,
+             description = "rate of mass flow per unit area in units of grams per meter squared per second"),
+  data.frame(id = "meterSquaredPerSecondSquared",
+             unitType = "unknown",
+             parentSI = "unknown",
+             multiplierToSI = "unknown",
+             description = "covariance of N-S (metersPerSecond) and E-W (metersPerSecond) wind speeds"),
+  data.frame(id = "meterCelsiusPerSecond",
+             unitType = "unknown",
+             parentSI = "unknown",
+             multiplierToSI = "unknown",
+             description = "covariance of virtual temperature (celsius) and wind speed (metersPerSecond) "))
 unitList <- set_unitList(custom_units)
 
 eml <- new("eml",
@@ -275,7 +308,7 @@ eml <- new("eml",
            additionalMetadata = as(unitList, "additionalMetadata"))
 
 # write the xml to file ----
-write_eml(eml, "out.xml")
+write_eml(eml, "knb-lter-cap.649.1.xml")
 
 # use Tom's metadata to populate attr files (a one-time need) ----
 # get Tom's descriptions from the database
