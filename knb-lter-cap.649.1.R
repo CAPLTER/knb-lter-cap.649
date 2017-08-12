@@ -25,14 +25,14 @@ getSlots("creator")
   getSlots("userId")
 
 # libraries ----
-library("EML")
-library('RPostgreSQL')
-library('RMySQL')
-library('tidyverse')
-library("tools")
-library("readr")
-library("readxl")
-library("magrittr")
+library(EML)
+library(RPostgreSQL)
+library(RMySQL)
+library(tidyverse)
+library(tools)
+library(readr)
+library(readxl)
+library(magrittr)
 
 # reml-helper-functions ----
 # source('~/localRepos/reml-helper-tools/createdataTableFn.R')
@@ -129,7 +129,13 @@ groundSensors_DT <- createDTFF(dfname = groundSensors,
 
 # maintenance log
 # log exported (or, maybe, copied) from confluence
-maintenance_log <- read_csv('maintenanceLogFromConfluence.csv')
+# maintenance_log <- read_csv('maintenanceLogFromConfluence.csv')
+
+# manually add new entries (there are so few that it is easy to do this manually)
+# in the future, get the base file from the DB !!!
+maintenance_log <- maintenanceLogFromConfluence %>% 
+  add_row(date = '2017-06-28', action = 'data retrieval') %>% 
+  add_row(date = '2017-07-27', action = 'data retrieval')
 
 writeAttributesEx(maintenance_log) # write data frame attributes to a csv in current dir to edit metadata
 maintenance_log_desc <- "log of maintenance activity at the CAP LTER flux tower located in the west Phoenix, AZ neighborhood of Maryvale"
@@ -138,6 +144,9 @@ maintenance_log_desc <- "log of maintenance activity at the CAP LTER flux tower 
 # use createdataTableFn() if attributes and classes are to be passed directly
 maintenance_log_DT <- createDTFF(dfname = maintenance_log,
                                  description = maintenance_log_desc)
+
+bucketlist()
+put_object(file = '649_maintenance_log_dd68e293482738ac6f05303d473687a2.csv', object = '/datasets/cap/649_maintenance_log_dd68e293482738ac6f05303d473687a2.csv', bucket = 'gios-data')
 
 # title and abstract ----
 title <- 'Long-term monitoring of micrometeorological conditions at the CAP LTER flux tower located in the west Phoenix, AZ neighborhood of Maryvale, ongoing since 2010'
@@ -184,8 +193,7 @@ keywordSet <-
                      "human-environment interactions")),
     new("keywordSet",
         keywordThesaurus = "Creator Defined Keyword Set",
-        keyword =  c("surface energy balance",
-                     "unlisted stuff")),
+        keyword =  c("surface energy balance")),
     new("keywordSet",
         keywordThesaurus = "CAPLTER Keyword Set List",
         keyword =  c("cap lter",
@@ -205,7 +213,8 @@ methods <- set_methods("flux_tower_methods.md")
 # begindate <- begindate$date
 
 begindate <- "2010-09-01"
-enddate <- "2017-05-30"
+enddate <- max(newDataUpload$date_time)
+enddate <- format(enddate, format = "%Y-%m-%d") 
 geographicDescription <- "CAP LTER study area"
 coverage <- set_coverage(begin = begindate,
                          end = enddate,
@@ -225,6 +234,8 @@ metadata_dist <- new("distribution",
                  online = xml_url)
 
 # DATASET
+
+# full data sets
 dataset <- new("dataset",
                title = title,
                creator = creators,
@@ -243,6 +254,12 @@ dataset <- new("dataset",
                              groundSensors_DT,
                              maintenance_log_DT))
                # otherEntity = c(core_arthropod_locations)) # if other entity is relevant
+# ls(pattern= "_DT") # can help to pull out DTs
+
+# updates
+dataset <- new("dataset",
+               dataTable = c(OPEC_DT,
+                             maintenance_log_DT))
 
 # ls(pattern= "_DT") # can help to pull out DTs
 
@@ -309,6 +326,7 @@ eml <- new("eml",
 
 # write the xml to file ----
 write_eml(eml, "knb-lter-cap.649.1.xml")
+write_eml(dataset, "updates_649.xml")
 
 # use Tom's metadata to populate attr files (a one-time need) ----
 # get Tom's descriptions from the database
