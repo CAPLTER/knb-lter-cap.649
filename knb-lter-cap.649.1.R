@@ -33,6 +33,7 @@ library(tools)
 library(readr)
 library(readxl)
 library(magrittr)
+library(aws.s3)
 
 # reml-helper-functions ----
 # source('~/localRepos/reml-helper-tools/createdataTableFn.R')
@@ -48,11 +49,12 @@ source('~/localRepos/reml-helper-tools/createFactorsDataframe.R')
 
 source('~/Documents/localSettings/pg_prod.R')
 source('~/Documents/localSettings/mysql_prod.R')
+source('~/Documents/localSettings/aws.s3')
   
 # dataset details to set first ----
 projectid <- 649
 packageIdent <- 'knb-lter-cap.649.1'
-pubDate <- '2017-06-06'
+pubDate <- '2017-08-14'
 
 # data entity ----
 
@@ -72,12 +74,15 @@ OPEC %<>%
   spread(key = observation, value = value)
 
 writeAttributes(OPEC) # write data frame attributes to a csv in current dir to edit metadata
-OPEC_desc <- "Open Path Eddy Covariance (OPEC) data, inlcuding gas analyzer, 3D sonic anemometer, and temperature and relative humidity sensor data measured at the CAP LTER flux tower located in the west Phoenix, AZ neighborhood of Maryvale"
+OPEC_desc <- "Open Path Eddy Covariance (OPEC) data, inlcuding gas analyzer, 3D sonic anemometer, and temperature and relative humidity sensor data measured at the CAP LTER flux tower located in the west Phoenix, AZ neighborhood of Maryvale. Data included here are 30-minute averages of values collected at 10 Hz."
 
 # create data table based on metadata provided in the companion csv
 # use createdataTableFn() if attributes and classes are to be passed directly
 OPEC_DT <- createDTFF(dfname = OPEC,
                       description = OPEC_desc)
+
+bucketlist()
+put_object(file = '649_OPEC_e74e197db420a407fc26828d793ecdc2.csv', object = '/datasets/cap/649_OPEC_e74e197db420a407fc26828d793ecdc2.csv', bucket = 'gios-data')
 
 # CR23X
 radiometer_rain <- dbGetQuery(pg_prod, '
