@@ -1,0 +1,9 @@
+instrument,type,mfg,asu#,measures,calibrate?,frequency,last calibrated - notes
+CSAT 3d sonic anemometer,sensor,Campbell,6161057,wind speed and direction,yes,3-5 y,2017-01-13
+Licor LI7500 (IRGA),sensor,Licor,6161058,CO2/H2O,yes,annually,2019-11-18
+HC2S3 probe (replaced HMP45C),sensor,Rotronic,None,Temperature and Relative Humidity,yes,every 2 years,2019-12-03
+Net radiometer  (NR01),sensor,Hukseflux,None,Energy balance,yes,every 2 years,2019-08-05
+TB4 Rain Gauge,sensor,Campbell,None,precipitation,no,NA,factory calibrated so recalibration not necessary but annual field check is recommended
+CR23XPB,logger,Campbell,6126596,radiation sensors and rain gage,yes,"every 3 y per Campbell but every few years per E. Vivoni",2020-01-24
+CR1000,logger,Campbell,Unknown,eddy flux sensors,yes,,2020-01-24
+CR1000_soil,logger,Campbell,Unknown,soil sensors,yes,,not deployed
