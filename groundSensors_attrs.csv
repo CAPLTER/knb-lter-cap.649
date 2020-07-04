@@ -1,16 +1,16 @@
-attributeName,formatString,unit,numberType,definition,attributeDefinition,columnClasses,missingValueCode,missingValueCodeExplanation
+attributeName,formatString,unit,numberType,definition,attributeDefinition,columnClasses,minimum,maximum
 date_time,YYYY-MM-DD hh:mm:ss,,,,observation date and time,Date,,
-batt_volt_Avg,,volt,real,,battery voltage,numeric,,
-PA_uS_2_Avg,,microsecond,real,,"sensor output period, 15 cm",numeric,"""NA""",missing value
-PA_uS_3_Avg,,microsecond,real,,"sensor output period, 30 cm",numeric,"""NA""",missing value
-PA_uS_Avg,,microsecond,real,,"sensor output period, 5 cm (used to calculate VW)",numeric,"""NA""",missing value
-PTemp_C_AVG,,celsius,real,,panel temperature,numeric,,
-shf_2_Avg,,wattPerMeterSquared,real,,"soil heat flux, under bare soil",numeric,"""NA""",missing value
-shf_Avg,,wattPerMeterSquared,real,,"soil heat flux, under gravel",numeric,"""NA""",missing value
-Temp_C_2_AVG,,celsius,real,,"soil temperature, 5 cm",numeric,"""NA""",missing value
-Temp_C_3_AVG,,celsius,real,,"soil temperature, 15 cm",numeric,"""NA""",missing value
-Temp_C_4_AVG,,celsius,real,,"soil temperature, 30 cm",numeric,"""NA""",missing value
-Temp_c_AVG,,celsius,real,,sensor temperature,numeric,"""NA""",missing value
-VW_2_AVG,,dimensionless,real,,"volumetric water content, 15 cm",numeric,"""NA""",missing value
-VW_3_AVG,,dimensionless,real,,"volumetric water content, 30 cm",numeric,"""NA""",missing value
-VW_AVG,,dimensionless,real,,"volumetric water content, 5 cm",numeric,"""NA""",missing value
+batt_volt_Avg,,volt,real,,battery voltage,numeric,9.67,13.21
+PA_uS_2_Avg,,microsecond,real,,"sensor output period, 15 cm",numeric,15.08,43.83
+PA_uS_3_Avg,,microsecond,real,,"sensor output period, 30 cm",numeric,14.99,44.02
+PA_uS_Avg,,microsecond,real,,"sensor output period, 5 cm (used to calculate VW)",numeric,15.08,40.85
+PTemp_C_AVG,,celsius,real,,panel temperature,numeric,-4.536,63.41
+shf_2_Avg,,wattPerMeterSquared,real,,"soil heat flux, under bare soil",numeric,-218.1703,203.9231
+shf_Avg,,wattPerMeterSquared,real,,"soil heat flux, under gravel",numeric,-367.0928,3107.286
+Temp_C_2_AVG,,celsius,real,,"soil temperature, 5 cm",numeric,-0.247,56.57
+Temp_C_3_AVG,,celsius,real,,"soil temperature, 15 cm",numeric,3.792,49.48
+Temp_C_4_AVG,,celsius,real,,"soil temperature, 30 cm",numeric,6.353,45.29
+Temp_c_AVG,,celsius,real,,sensor temperature,numeric,-3.284,61.85
+VW_2_AVG,,dimensionless,real,,"volumetric water content, 15 cm",numeric,-0.002,1.002
+VW_3_AVG,,dimensionless,real,,"volumetric water content, 30 cm",numeric,-0.003,1.013
+VW_AVG,,dimensionless,real,,"volumetric water content, 5 cm",numeric,-0.002,0.844
