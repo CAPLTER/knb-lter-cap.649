@@ -1,0 +1,258 @@
+---
+title: "knb-lter-cap.649"
+output: github_document
+---
+
+```{r libraries, echo=FALSE}
+library(kableExtra)
+library(readr)
+library(gt)
+```
+
+
+## long-term monitoring: Maryvale flux tower
+
+This repository houses the work flow for publishing long-term data from the CAP LTER flux tower in Phoenix, AZ.
+
+* for project protocols see: [fluxtower_protocol](https://github.com/CAPLTER/caplter-research-protocols/blob/master/FluxTower/FluxTower_Protocol.md)
+* for data uploading see: [fluxtower-data-processing](https://github.com/CAPLTER/fluxtower-data-processing)
+
+## outline
+
+* [overview](#overview)
+* [maintenance schedule](#maintenance-schedule)
+* [instrumentation](#instrumentation)
+* [soil moisture calibration](#soil-moisture-calibration)
+* [tower metadata](#tower-metadata)
+* [maintenance log](#maintenance-log)
+
+## overview
+
+The CAP LTER maintains a flux tower to facilitate neighborhood-scale investigations of atmospheric processes in a Phoenix, AZ suburb. Capitalizing on comprehensive measurements of energy (heat and radiation) and matter (water and carbon dioxide) exchanges between the atmosphere and the urban surface, this project adds significantly to research investigating how urbanization affects local weather, climate, and air quality. Results of this study are contributing greatly to our understanding of climate issues pertinent to urban areas, such as the urban heat island (UHI), climate forecasting, air quality, and yardscape water demands and consumption. Further, this research provides critical on-the-ground data required to validate regional climate models that influence water management and emergency planning. Ultimately, these data may contribute to urban design and management that aid the conservation of resources and ameliorate temperature extremes.
+
+An antenna-mounted array of sophisticated sensors measuring temperature, humidity, and wind speed and direction at high temporal resolutions facilitates the calculation of energy and material fluxes. This antenna-based approach has been used for similar climate observation campaigns worldwide, including those in Vancouver, Singapore, Basel, Mexico City, Tucson, and London, but this is the first long-term urban flux study in a large, arid city that we are aware. The residential setting where the tower is positioned was selected on account of the homogeneous building design (single-story, single-family, detached dwellings) representative of many neighborhoods throughout the Valley, and also due to generous technical and logistical assistance offered by the Maricopa County Air Quality Department, which maintains a separate air-quality monitoring station at the secure parcel. To avoid the influence of localized turbulence and material fluxes created by anomalous surface objects, the antenna extends vertically approximately 75 ft to sample neighborhood-scale fluxes. Though quite tall, the slender tower profile is minimally disruptive to the skyline.
+
+## maintenance schedule
+
+| Month | Task                                       | Data download     |
+|-------|--------------------------------------------|-------------------|
+| Jan   | clean radiometer                           | ≤ 1 mo. interval  |
+| Feb   |                                            | ≤ 1 mo. interval  |
+| Mar   |                                            | ≤ 1 mo. interval  |
+| Apr   | calibrate HMP & radiometer; calibrate IRGA | ≤ 1 mo. interval  |
+| May   |                                            | ≤ 1 mo. interval  |
+| Jun   |                                            | ≤ 1 mo. interval  |
+| Jul   | clean radiometer                           | ≤ 1 mo. interval  |
+| Aug   |                                            | ≤ 1 mo. interval  |
+| Sep   |                                            | ≤ 1 mo. interval  |
+| Oct   | clean radiometer; calibrate IRGA           | ≤ 1 mo. interval  |
+| Nov   |                                            | ≤ 1 mo. interval  |
+| Dec   |                                            |  ≤ 1 mo. interval |
+
+## instrumentation
+
+```{r instrumentation, eval=T, echo=FALSE, message=FALSE, results='asis'}
+
+read_csv("flux_tower_instrumentation.csv") %>%
+  kable()
+```
+
+## soil moisture calibration
+
+*ASU Hydrology Laboratory and CAP LTER*
+
+*Maryvale Soil Moisture Calibration Documentation*
+
+I. Overview
+
+In January 2012, the site of the Maryvale (WPHX) flux tower was instrumented with three CS-616 Water Content Reflectometers, measuring volumetric water content (m3/m3) of the soil at 5, 15, and 30 cm. The soil moisture values seen are suspiciously high, with a maximum value of nearly 0.8, while the maximum value at saturation should equal the porosity of the soil (~0.4). This is possible due to the high clay composition of the soil; the default calibration equations for the CS-616 assumes clay content under 30%. This document therefore details a laboratory experiment conducted to check the readings of the CS-616 against measurements taken from soil samples, and thereby create a calibration equation specific to the soil at the Maryvale site.
+
+II. Experimental Setup
+
+A large hole, approximately 35 cm deep, was dug at the Maryvale site near the location of the installed soil moisture sensors. The vertical column was mixed thoroughly to simulate the mixed soil placed on top of the soil moisture sensors as they were being buried. 10 cm of the mixed soil was then placed in each of 7 medium-sized gray plastic bins, tamped periodically by hand and by foot. In one of the seven, a CS-616 was installed at 5 cm. It is assumed that all seven bins have roughly the same amount of soil, and the soil is of approximately the same composition across the seven, and this composition is similar to the soil column of the installed field sensors.
+
+Water was added to the seven bins until each was saturated. They were allowed to equilibrate, and then resaturated. This process was repeated until each bin showed significant standing water after equilibration. Then water was added so that each bin had exactly 10 mm of standing water. The assumption here is that all seven bins will be at saturation and will dry out at the same rate.
+
+The CS-616 in one of the seven bins was connected to a CS800 to read the data. This bin is not disturbed in the experiment, but instead samples are taken from the other six bins, under the assumption that soil moisture values will be the same in all the bins at any given time. This avoids experimental error from removing soil from the bin being measured for purposes of measurement.
+
+III. Taking Measurements
+
+Periodically, a soil moisture sample is taken from the middle of a bin and pressed into a sample tin such that the soil is level at the top of the tin. The full tin is weighed, then placed in the oven to dry, and the volumetric soil moisture from the CS-616 is noted. The tin is then weighed again daily until the mass no longer decreases. The first measurement is taken while the soil is still saturated. Other necessary measurements include the mass of the empty tin, and its volume, as determined by filling it with water and weighing it. After a sample is taken from a bin, dried, and measured, the soil in the tin is returned to the same bin.
+
+IV. Calculations
+
+* Mass of Empty Tin: 21 g
+* Mass of Tin filled with Water: 155 g
+* Mass of Water to Fill Tin: 134 g
+* Volume of Tin: 134 cm3 (using density of water = 1 kg/L = 1 g/cm3)
+* Volumetric water content is defined as the volume of the water in the sample divided by the total volume of the sample. Since the tin is filled when the sample is taken, the total volume is known. The volume of the water is calculated as the difference between the mass of the tin initially and after drying, divided by the density of water. θ=minitial-mdriedVtinρw
+
+| Initial Mass (g) | Sensor Reading | Drying mass (g) | Dried mass (g) | Tin mass (g) | Tin Volume (mL) | Theta    |
+|------------------|----------------|-----------------|----------------|--------------|-----------------|----------|
+| 288              | 0.762          | 237             | 236            | 21           | 134             | 0.38806  |
+| 280              | 0.679          | 230             | 230            | 21           | 134             | 0.373134 |
+| 272              | 0.593          | 250             | 250            | 21           | 134             | 0.164179 |
+| 255              | 0.42           | 245             | 242            | 21           | 134             | 0.097015 |
+| 258              | 0.314          | 240             | 240            | 21           | 134             | 0.134328 |
+| 263              | 0.263          | 254             | 254            | 21           | 134             | 0.067164 |
+
+V. Conclusions and Future Work
+
+The following figure shows these theta values plotted against those taken from the sensor. A linear fit gives a relationship of θactual = 0.6239 θsensor – 0.1112. It would likely be a good idea to run the entire experiment several more times, mixing the order of the bins to reduce error resulting from differences among the six soil samples. This would still leave the experiment prone to error resulting from a difference between the sample with the sensor and all the others. Moving the sensor to a different bin would alleviate this problem.
+
+## tower metadata
+
+*August 2014*
+
+*Thomas J. Volo*
+
+This volume contains data from the West Phoenix/Maryvale urban eddy flux tower from its installation in December 2011 through August 27, 2014. The 23 m (73 ft) tower is located at -112.1426 W, +33.4838 N, in a xeric residential neighborhood in Maryvale, AZ, within the CAP-LTER study area. The tower is instrumented for long-term measurement of the covariance of turbulent eddy and radiative fluxes for the purposes of urban micrometeorological research.
+These are raw data and have not been processed at all. Winston Chow, who established the tower as a post-doc at ASU, has processed some data (2011-2012) and has a publication based on it (Chow et al., International Journal of Climatology, 2014).Those processed data are stored elsewhere. Darrel Jenerette, a CAP-LTER scientist at UC-Riverside, has a copy of this raw data and has committed to processing it. An ftp has been established for sending more recent data to Dr. Jenerette, and for transferring the processed data back to ASU for publication.
+
+**The tower has three data loggers, and this volume has a folder for each. The instruments and data associated with each logger are summarized below.**
+
+| Data Logger | Instruments                                  | Data                                                                                        |
+|-------------|----------------------------------------------|---------------------------------------------------------------------------------------------|
+| CR23X       | Hukseflux NR01 four-component net radiometer | incoming and outgoing short- and long-wave radiation (W/m2)                                 |
+|             | TB4 tipping-bucket rain gauge                | rainfall (mm)                                                                               |
+| CR1000_Soil | CS-616 water content reflectometers (3)      | volumetric soil moisture (m3/m3) at 5, 15, and 30 cm                                        |
+|             | Hukseflux HFP01-SC heat flux plates (2)      | soil heat flux (W/m2) (one HFP currently not operational and uninstalled, data shows "NAN") |
+|             | TCAV soil thermocouples (4)                  | soil temperature (° C)                                                                      |
+| CR1000_EC   | LI-7500 infrared gas analyzer (IRGA)         | CO2 and H2O concentrations (mg/m3, g/m3)                                                    |
+|             | CSAT 3D sonic anemometer                     | three-directional wind speed (m/s)                                                          |
+|             | HMP45C T/RH sensor                           | air temperature (°C) and relative humidity                                                  |
+
+**CR23X: Radiometer, Rain Gauge (30 minute averages)**
+
+| Data Table Label | Units               | Description                                                                  |
+|------------------|---------------------|------------------------------------------------------------------------------|
+| TIMESTAMP        | YYYY-MM-DD HH:MM:SS | logger timestamp                                                             |
+| RECORD           | -                   | record number                                                                |
+| SR01_up_1_AVG    | W/m2                | upwelling shortwave radiation                                                |
+| SR01_dn_2_AVG    | W/m2                | downwelling shortwave radiation                                              |
+| IR01_up_3_AVG    | W/m2                | upwelling longwave (infrared) radiation                                      |
+| IR01_dn_4_AVG    | W/m2                | downwelling longwave (infrared) radiation                                    |
+| Temp_c_AVG       | °C                  | sensor temperature                                                           |
+| Temp_k_AVG       | K                   | sensor temperature                                                           |
+| Net_Rs_AVG       | W/m2                | net shortwave radiation                                                      |
+| Net_RI_AVG       | W/m2                | net longwave (infrared) radiation                                            |
+| Albedo_AVG       | -                   | shortwave surface albedo                                                     |
+| Net_total_AVG    | W/m2                | net total radiation                                                          |
+| IR01upCor_AVG    | W/m2                | upwelling longwave radiation corrected for Boltzmann radiation from sensor   |
+| IR-1dnCor_AVG    | W/m2                | downwelling longwave radiation corrected for Boltzmann radiation from sensor |
+| Rain_mm_TOT      | mm                  | total rainfall for 30 min period                                             |
+
+**CR1000_Soil: 3 soil moisture sensors, 4 soil temperature probes, 2 heat flux plates (30 minute averages)**
+
+| Data Table Label | Units               | Description                                       |
+|------------------|---------------------|---------------------------------------------------|
+| TIMESTAMP        | YYYY-MM-DD HH:MM:SS | logger timestamp                                  |
+| RECORD           | -                   | record number                                     |
+| VW_AVG           | m3/m3               | volumetric water content, 5 cm                    |
+| VW_2_AVG         | m3/m3               | volumetric water content, 15 cm                   |
+| VW_3_AVG         | m3/m3               | volumetric water content, 30 cm                   |
+| Temp_C_AVG       | °C                  | soil temperature, 2 cm                            |
+| Temp_C_2_AVG     | °C                  | soil temperature, 5 cm                            |
+| Temp_C_3_AVG     | °C                  | soil temperature, 15 cm                           |
+| Temp_C_4_AVG     | °C                  | soil temperature, 30 cm                           |
+| PTemp_C_AVG      | °C                  | panel temperature                                 |
+| shf_Avg          | W/m2                | soil heat flux, under gravel                      |
+| shf_2_Avg        | W/m2                | soil heat flux, under bare soil                   |
+| Batt_Volt_Avg    | V                   | voltage of battery                                |
+| PA_uS_Avg        | μs                  | sensor output period, 5 cm (used to calculate VW) |
+| PA_uS_2_Avg      | μs                  | sensor output period, 15 cm                       |
+| PA_uS_3_Avg      | μs                  | sensor output period, 30 cm                       |
+
+**CR1000_EC**: gas analyzer, 3D sonic anemometer, temperature/relative humidity sensor
+
+Data from this sensor is stored in two types of files: 10 Hz data and 30 min averages. Each of these comes in two formats: TOB1 binary format and TOA5 readable format. The TOA5 files were converted from the TOB1 files, so time periods should coincide between the two. Time periods between the 10 Hz and 30 min data will not always coincide, since the data was not always accessed by the same means, especially beginning in the summer of 2014.
+CR1000_EC 10 Hz data (".ts" files)
+
+| Data Table Label | Units                 | Description                         |
+|------------------|-----------------------|-------------------------------------|
+| TIMESTAMP        | YYYY-MM-DD HH:MM:SS.S | logger timestamp                    |
+| RECORD           | -                     | record number                       |
+| Ux               | m/s                   | E  W wind speed                    |
+| Uy               | m/s                   | N  S wind speed                    |
+| Uz               | m/s                   | upward wind speed                   |
+| Ts               | °C                    | virtual temperature from anemometer |
+| co2              | mg/m3                 | CO2 concentration of air            |
+| h2o              | g/m3                  | water vapor concentration of air    |
+| press            | kPa                   | air pressure                        |
+| diag_csat        | -                     | value for diagnosing CSAT problems  |
+| t_hmp            | °C                    | air temperature from T/RH sensor    |
+| e_hmp            | kPa                   | vapor pressure from T/RH sensor     |
+
+CR1000_EC 30 min data (".flux" files)
+
+| Data Table Label | Units               | Description                                                       |
+|------------------|---------------------|-------------------------------------------------------------------|
+| TIMESTAMP        | YYYY-MM-DD HH:MM:SS | logger timestamp                                                  |
+| RECORD           | -                   | record number                                                     |
+| Hs               | W/m2                | Sensible heat flux using sonic temperature                        |
+| Fc_wpl           | mg/m2s              | CO2 flux with Webb correction term                                |
+| LE_wpl           | W/m2                | Latent heat flux with Webb correction term                        |
+| Hc               | W/m2                | Sensible heat flux computed from Hs and LE_wpl                    |
+| tau              | kg/ms2              | momentum flux                                                     |
+| u_star           | m/s                 | friction velocity                                                 |
+| Ts_mean          | °C                  | average virtual temperature from anemometer                       |
+| stdev_Ts         | °C                  | standard deviation of Ts                                          |
+| cov_Ts_Ux        | m°C/s               | covariance: Ts and Ux                                             |
+| cov_Ts_Uy        | m °C/s              | covariance: Ts and Uy                                             |
+| cov_Ts_Uz        | m °C/s              | covariance: Ts and Uz                                             |
+| co2_mean         | mg/m3               | average CO2 concentration                                         |
+| stdev_co2        | mg/m3               | standard deviation of CO2 concentration                           |
+| cov_co2_Ux       | mg/m2s              | covariance: co2 and Ux                                            |
+| cov_co2_Uy       | mg/m2s              | covariance: co2 and Uy                                            |
+| cov_co2_Uz       | mg/m2s              | covariance: co2 and Uz                                            |
+| h2o_Avg          | g/m3                | average H2O concentration (IRGA)                                  |
+| stdev_h2o        | g/m3                | standard deviation of H2O concentration                           |
+| cov_h2o_Ux       | g/m2s               | covariance: h2o and Ux                                            |
+| cov_h2o_Uy       | g/m2s               | covariance: h2o and Uy                                            |
+| cov_h2o_Uz       | g/m2s               | covariance: h2o and Uz                                            |
+| Ux_Avg           | m/s                 | average E  W wind speed                                          |
+| stdev_Ux         | m/s                 | standard deviation of E  W wind speed                            |
+| cov_Ux_Uy        | (m/s)2              | covariance: Ux and Uy                                             |
+| cov_Ux_Uz        | (m/s)2              | covariance: Ux and Uz                                             |
+| Uy_Avg           | m/s                 | average N  S wind speed                                          |
+| stdev_Uy         | m/s                 | standard deviation of N  S wind speed                            |
+| cov_Uy_Uz        | (m/s)2              | covariance: Uy and Uz                                             |
+| Uz_Avg           | m/s                 | average upward wind speed                                         |
+| stdev_Uz         | m/s                 | standard deviation of upward wind speed                           |
+| press_mean       | kPa                 | mean air pressure                                                 |
+| t_hmp_mean       | °C                  | mean air temperature from T/RH sensor                             |
+| h2o_hmp_mean     | g/m3                | mean vapor density from T/RH sensor                               |
+| rho_a_mean       | kg/m3               | mean air density                                                  |
+| wnd_dir_compass  | degrees             | wind direction (compass) corrected for azimuth                    |
+| wnd_dir_csat3    | degrees             | wind direction with reference to CSAT field of view               |
+| wnd_spd          | m/s                 | mean wind speed                                                   |
+| rslt_wnd_spd     | m/s                 | average wind speed in compass coordinate system                   |
+| std_wnd_dir      | degrees             | standard deviation of wind direction in compass coordinate system |
+| Fc_irga          | mg/m2s              | CO2 flux without Webb correction term                             |
+| LE_irga          | W/m2                | latent heat flux without Webb correction term                     |
+| co2_wpl_LE       | mg/m2s              | Webb correction term for CO2 flux due to latent heat flux         |
+| co2_wpl_H        | mg/m2s              | Webb correction term for CO2 flux due to sensible heat flux       |
+| h2o_wpl_LE       | W/m2                | Webb correction term for H2O flux due to latent heat flux         |
+| h2o_wpl_H        | W/m2                | Webb correction term for H2O flux due to sensible heat flux       |
+| n_Tot            | samples             | number of samples in averaging period                             |
+| csat_warnings    | samples             | number of samples with CSAT flags                                 |
+| irga_warnings    | samples             | number of samples with IRGA flags                                 |
+| del_T_f_Tot      | samples             | number of samples with delta temperature flags                    |
+| sig_lck_f_Tot    | samples             | number of samples with poor signal lock flags                     |
+| amp_h_f_Tot      | samples             | number of samples with amplitude high flags                       |
+| amp_l_f_Tot      | samples             | number of samples with amplitude low flags                        |
+| chopper_f_Tot    | samples             | number of samples with chopper warning flags                      |
+| detector_f_Tot   | samples             | number of samples with detector warning flags                     |
+| pll_f_Tot        | samples             | number of samples with PLL warning flags                          |
+| sync_f_Tot       | samples             | number of samples with synchronization flags                      |
+| agc_Avg          | -                   | automatic gain control                                            |
+| panel_temp_Avg   | °C                  | datalogger panel temperature                                      |
+| batt_v#olt_Avg   | V                   | battery voltage                                                   |
+
+## maintenance log
+
+```{r maint-log, eval=T, echo=FALSE, message=FALSE, results='asis'}
+
+read_csv("maintenance_log.csv") %>%
+  kable()
+```

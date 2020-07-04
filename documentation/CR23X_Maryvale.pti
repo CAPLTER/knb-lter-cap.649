@@ -1,0 +1,48 @@
+Program Trace Information File for:  Maryvale.csi
+Date: 1/16/2020
+Time: 14:51:25
+
+T = Program Table Number
+N = Sequential Program Instruction Location Number
+Instruction = Instruction Number and Name
+
+Inst ExTm = Individual Instruction Execution Time
+Block ExTm = Cumulative Execution Time for program block,
+             i.e., subroutine
+Prog ExTm = Cumulative Total Program Execution Time
+
+                                                             --On Output--
+                                   Inst  Block   Prog     Inst  Block   Prog
+                                   ExTm   ExTm   ExTm     ExTm   ExTm   ExTm
+T|N|Instruction                   (msec) (msec) (msec)   (msec) (msec) (msec)
+---------------                   ------ ------ ------   ------ ------ ------
+1|1|2 Volt (Diff)                 770.8  770.8  770.8    770.8  770.8  770.8
+1|2|53 Scaling Array (A*Loc+B)      2.3  773.1  773.1      2.3  773.1  773.1
+1|3|9 Full Bridge w/mv Excit      170.5  943.6  943.6    170.5  943.6  943.6
+1|4|16 Temperature RTD              2.1  945.7  945.7      2.1  945.7  945.7
+1|5|34 Z=X+F                        0.6  946.3  946.3      0.6  946.3  946.3
+1|6|35 Z=X-Y                        0.7  947.0  947.0      0.7  947.0  947.0
+1|7|35 Z=X-Y                        0.7  947.7  947.7      0.7  947.7  947.7
+1|8|38 Z=X/Y                        1.5  949.2  949.2      1.5  949.2  949.2
+1|9|33 Z=X+Y                        0.7  949.9  949.9      0.7  949.9  949.9
+1|10|33 Z=X+Y                       0.7  950.6  950.6      0.7  950.6  950.6
+1|11|35 Z=X-Y                       0.7  951.3  951.3      0.7  951.3  951.3
+1|12|30 Z=F x 10^n                  1.3  952.6  952.6      1.3  952.6  952.6
+1|13|30 Z=F x 10^n                  0.5  953.1  953.1      0.5  953.1  953.1
+1|14|47 Z=X^Y                       7.7  960.8  960.8      7.7  960.8  960.8
+1|15|36 Z=X*Y                       0.7  961.5  961.5      0.7  961.5  961.5
+1|16|33 Z=X+Y                       0.7  962.2  962.2      0.7  962.2  962.2
+1|17|33 Z=X+Y                       0.7  962.9  962.9      0.7  962.9  962.9
+1|18|3 Pulse                        1.6  964.5  964.5      1.6  964.5  964.5
+1|19|84 Data Table                  0.3  964.8  964.8      1.1  965.6  965.6
+Table Name:  
+1|20|71 Average                     4.2  969.0  969.0     21.8  987.4  987.4
+ Output Data 12 Values
+1|21|72 Totalize                    0.7  969.7  969.7      1.5  988.9  988.9
+ Output Data 1 Values
+
+Program Table 1 Execution Interval    1.000 Seconds
+
+Table 1 Estimated Total Program Execution Time in msec  969.7 w/Output  988.9
+
+Estimated Total Final Storage Locations used per day 1209600
