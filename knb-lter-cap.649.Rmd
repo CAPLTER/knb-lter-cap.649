@@ -10,38 +10,15 @@ editor_options:
 # libraries
 
 ```{r libraries}
-library(EML)
 library(tidyverse)
 library(readxl)
 library(capeml)
 library(gioseml)
 ```
 
-# dataset details
+# data entities
 
-```{r dataset_details}
-projectid <- 649
-packageIdent <- "knb-lter-cap.649.2"
-```
-
-# database connections
-
-```{r connections::postgres::local, eval=FALSE}
-# functions and setting for connecting to postgres
-source("~/Documents/localSettings/pg_local.R")
-```
-
-```{r connections::postgres::prod, eval=FALSE}
-# functions and setting for connecting to postgres
-source("~/Documents/localSettings/pg_prod.R")
-```
-
-```{r connections::mysql::prod, eval=FALSE}
-# functions and setting for connecting to mysql
-source("~/Documents/localSettings/mysql_prod.R")
-```
-
-# dataTable
+## CR1000-EC
 
 ```{r CR1000-EC, eval=TRUE}
 
@@ -59,15 +36,20 @@ ORDER BY ec.measurement_id, ec.date_time;')
 OPEC <- OPEC %>%
   spread(key = observation, value = value)
 
-write_attributes(OPEC)
+# write_attributes(OPEC)
 # write_factors(OPEC)
 
 OPEC_desc <- "Open Path Eddy Covariance (OPEC) data, inlcuding gas analyzer, 3D sonic anemometer, and temperature and relative humidity sensor data measured at the CAP LTER flux tower located in the west Phoenix, AZ neighborhood of Maryvale. Data included here are 30-minute averages of values collected at 10 Hz."
 
-OPEC_DT <- create_dataTable(dfname = OPEC,
-  description = OPEC_desc)
+OPEC_DT <- create_dataTable(
+  dfname = OPEC,
+  description = OPEC_desc,
+  dateRangeField = "date_time"
+)
 
 ```
+
+## CR23X
 
 ```{r CR23X, eval=TRUE}
 
@@ -85,15 +67,20 @@ ORDER BY cr23x.measurement_id, cr23x.date_time;')
 radiometer_rain <- radiometer_rain %>%
   spread(key = observation, value = value)
 
-write_attributes(radiometer_rain)
+# write_attributes(radiometer_rain)
 # write_factors(radiometer_rain)
 
 radiometer_rain_desc <- "radiometer and rain gauge (30-minute averages) data measured at the CAP LTER flux tower located in the west Phoenix, AZ neighborhood of Maryvale"
 
-radiometer_rain_DT <- create_dataTable(dfname = radiometer_rain,
-  description = radiometer_rain_desc)
+radiometer_rain_DT <- create_dataTable(
+  dfname = radiometer_rain,
+  description = radiometer_rain_desc,
+  dateRangeField = "date_time"
+)
 
 ```
+
+## CR1000-Soil
 
 ```{r CR1000-Soil, eval=TRUE}
 
@@ -111,37 +98,38 @@ ORDER BY cr1000soil.measurement_id, cr1000soil.date_time;')
 groundSensors <- groundSensors %>%
   spread(key = observation, value = value)
 
-write_attributes(groundSensors)
+# write_attributes(groundSensors)
 # write_factors(groundSensors)
 
 groundSensors_desc <- "data (30-minute averages) from 3 soil moisture sensors, 4 soil temperature probes, and 2 heat flux plates buried at multiple depths at the CAP LTER flux tower located in the west Phoenix, AZ neighborhood of Maryvale"
 
-groundSensors_DT <- create_dataTable(dfname = groundSensors,
-  description = groundSensors_desc)
+groundSensors_DT <- create_dataTable(
+  dfname = groundSensors,
+  description = groundSensors_desc,
+  dateRangeField = "date_time"
+)
 
 ```
+
+## maintenance log
 
 ```{r maint-log, eval=TRUE}
 
 maintenance_log <- read_csv("maintenance_log.csv")
 
-write_attributes(maintenance_log)
+# write_attributes(maintenance_log)
 # write_factors(maintenance_log)
 
 maintenance_log_desc <- "log of maintenance activity at the CAP LTER flux tower located in the west Phoenix, AZ neighborhood of Maryvale"
 
-maintenance_log_DT <- create_dataTable(dfname = maintenance_log,
-  description = maintenance_log_desc)
+maintenance_log_DT <- create_dataTable(
+  dfname = maintenance_log,
+  description = maintenance_log_desc,
+  dateRangeField = "date"
+)
 
 ```
 
-
-# title
-
-```{r title}
-
-title <- 'Long-term monitoring of micrometeorological conditions at the CAP LTER flux tower located in the west Phoenix, AZ neighborhood of Maryvale, ongoing since 2010'
-```
 
 # people
 
@@ -151,39 +139,39 @@ See the gioseml package for examples of creating people resources from scratch.
 
 # creator(s) - required
 
-winston <- create_role(firstName = "w",
-                       lastName = "chow",
-                       roleType = "creator")
+winston <- create_role(
+  firstName = "w",
+  lastName = "chow",
+  roleType = "creator")
 
-dan <- create_role(firstName = "dan",
-                       lastName = "childers",
-                       roleType = "creator")
-
-# fabio <- create_role(giosPersonId = 23857,
-#                      roleType = "creator")
+dan <- create_role(
+  firstName = "dan",
+  lastName = "childers",
+  roleType = "creator")
 
 creators <- list(winston, dan)
 
 # metadata provider - required
 
-winston <- create_role(firstName = "w",
-                       lastName = "chow",
-                       roleType = "metadata")
+winston <- create_role(
+  firstName = "w",
+  lastName = "chow",
+  roleType = "metadata")
 
 tom <- EML::eml$metadataProvider(
   individualName = EML::eml$individualName(
     givenName = "Thomas",
     surName = "Volo"),
   electronicMailAddress = "Thomas.Volo@asu.edu",
-  organizationName = "Arizona State University",
-  id = "649.metadata_provider.thomas.volo",
+  organizationName = "Arizona State University"
 )
 
-stevan <- create_role(firstName = "st",
-                       lastName = "earl",
-                       roleType = "metadata")
+stevan <- create_role(
+  firstName = "st",
+  lastName = "earl",
+  roleType = "metadata")
 
-metadataProvider <- list(winston, tom, stevan) 
+metadataProvider <- list(winston, tom, stevan)
 
 ```
 
@@ -208,42 +196,31 @@ required or there are multiple methods files, otherwise the `create_dateset()`
 function will look for a methods.md file in the working directory (or a file
 path and name can be passed).
 
-## methods and provenance
-
-```{r methods_provenance, eval=FALSE}
-
-# methods from file tagged as markdown
-main <- list(description = list(read_markdown("methods.md")))
-
-library(EDIutils)
-
-# provenance: naip
-naip <- emld::as_emld(EDIutils::api_get_provenance_metadata("knb-lter-cap.623.1"))
-naip$`@context` <- NULL
-naip$`@type` <- NULL
-
-# provenance: lst
-landSurfaceTemp <- emld::as_emld(EDIutils::api_get_provenance_metadata("knb-lter-cap.677.1"))
-landSurfaceTemp$`@context` <- NULL
-landSurfaceTemp$`@type` <- NULL
-
-enhancedMethods <- EML::eml$methods(methodStep = list(main, naip, landSurfaceTemp))
-
-```
 
 # coverages
 
 ```{r coverages}
 
 begindate <- "2010-09-01"
-enddate <- max(OPEC$date_time)
-enddate <- format(enddate, format = "%Y-%m-%d") 
+
+enddate <- max(
+  max(as.Date(OPEC$date_time)),
+  max(as.Date(groundSensors$date_time)),
+  max(as.Date(radiometer_rain$date_time))
+)
+enddate <- format(enddate, format = "%Y-%m-%d")
+
 geographicDescription <- "CAP LTER study area"
-coverage <- set_coverage(begin = begindate,
-                         end = enddate,
-                         geographicDescription = geographicDescription,
-                         west = -112.1426, east = -112.1426,
-                         north = +33.4838, south = +33.4838)
+
+coverage <- EML::set_coverage(
+  begin = begindate,
+  end = enddate,
+  geographicDescription = geographicDescription,
+  west = -112.1426,
+  east = -112.1426,
+  north = +33.4838,
+  south = +33.4838
+)
 
 ```
 
@@ -267,11 +244,11 @@ dataset <- create_dataset()
 print(ls(pattern = "_DT"))
 
 if (length(ls(pattern = "_DT")) > 0) {
-  
+
   listOfDataTables <- lapply(ls(pattern = "_DT"), function(DT) { get(DT) } )
-  
-  dataset$dataTable  <- listOfDataTables  
-  
+
+  dataset$dataTable  <- listOfDataTables
+
 }
 
 # or add manually
@@ -316,42 +293,98 @@ custom_units <- rbind(
              multiplierToSI = "unknown",
              description = "covariance of virtual temperature (celsius) and wind speed (metersPerSecond)"))
 
-unitList <- set_unitList(custom_units,
-                         as_metadata = TRUE)
+unitList <- EML::set_unitList(
+  custom_units,
+  as_metadata = TRUE
+)
 
 ```
 
-# literature cited
-
-```{r literature cited, eval=FALSE}
-
-# add literature cited if relevant
-library(rcrossref)
-library(EML)
-
-mccafferty <- cr_cn(dois = "https://doi.org/10.1186/s40317-015-0075-2", format = "bibtex")
-mccaffertycit <- EML::eml$citation(id = "https://doi.org/10.1186/s40317-015-0075-2")
-mccaffertycit$bibtex <- mccafferty 
-
-citations <- list(
-  citation = list(
-    mccaffertycit
-  ) # close list of citations
-) # close citation
-
-dataset$literatureCited <- citations 
-
-```
 
 # eml
 
-```{r construct_eml, eval=TRUE}
+```{r construct-eml, eval=TRUE}
 
-eml <- create_eml()
+eml <- capeml::create_eml()
 ```
 
-```{r write_eml}
+```{r validate-eml, eval=TRUE}
 
-# write the eml to file
-write_eml(eml, paste0(packageIdent, ".xml"))
+EML::eml_validate(eml)
+```
+
+```{r eml-to-file, eval=TRUE}
+
+capeml::write_cap_eml()
+```
+
+
+# file placement
+
+## package details
+
+```{r package-details, eval=TRUE}
+
+# retrieve package details from config.yaml
+
+if (!file.exists("config.yaml")) {
+  stop("config.yaml not found")
+}
+packageIdent <- yaml::yaml.load_file("config.yaml")$packageIdent
+packageNum <- yaml::yaml.load_file("config.yaml")$packageNum
+```
+
+## AWS settings
+
+```{r S3_helper_functions}
+
+# functions and setting for uploading to S3
+
+library(aws.s3)
+source("~/Documents/localSettings/aws.s3")
+```
+
+## upload data files
+
+```{r preview_data_file_to_upload}
+
+# preview data set files that will be uploaded to S3
+list.files(pattern = paste0(packageNum, "_"))
+```
+
+```{r upload_data_S3}
+
+# upload files to S3
+
+lapply(list.files(pattern = paste0(packageNum, "_")), data_to_amz)
+```
+
+## copy and move XML as needed
+
+```{r duplicate_xml_as_needed}
+
+# XML to S3
+eml_to_amz(list.files(pattern = paste0(packageIdent, ".xml")))
+
+# XML to cap-data-eml
+file.copy(
+  from = list.files(pattern = paste0(packageIdent, ".xml")),
+  to = "/home/srearl/localRepos/cap-metadata/cap-data-eml/"
+)
+```
+
+## optionally delete data and xml files
+
+```{r optional: preview_files_to_delete}
+
+# preview files to delete
+dir(pattern = paste0(packageNum, "_"))
+list.files(pattern = paste0(packageIdent, ".xml"))
+```
+
+```{r optional: delete_files}
+
+# delete files
+file.remove(dir(pattern = paste0(packageNum, "_")))
+file.remove(list.files(pattern = paste0(packageIdent, ".xml")))
 ```
