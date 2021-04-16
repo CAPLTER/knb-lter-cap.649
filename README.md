@@ -6,19 +6,19 @@ knb-lter-cap.649
 This repository houses the work flow for publishing long-term data from
 the CAP LTER flux tower in Phoenix, AZ.
 
-  - for project protocols see:
+-   for project protocols see:
     [fluxtower\_protocol](https://github.com/CAPLTER/caplter-research-protocols/blob/master/FluxTower/FluxTower_Protocol.md)
-  - for data uploading see:
+-   for data uploading see:
     [fluxtower-data-processing](https://github.com/CAPLTER/fluxtower-data-processing)
 
 ## outline
 
-  - [overview](#overview)
-  - [maintenance schedule](#maintenance-schedule)
-  - [instrumentation](#instrumentation)
-  - [soil moisture calibration](#soil-moisture-calibration)
-  - [tower metadata](#tower-metadata)
-  - [maintenance log](#maintenance-log)
+-   [overview](#overview)
+-   [maintenance schedule](#maintenance-schedule)
+-   [instrumentation](#instrumentation)
+-   [soil moisture calibration](#soil-moisture-calibration)
+-   [tower metadata](#tower-metadata)
+-   [maintenance log](#maintenance-log)
 
 ## overview
 
@@ -58,7 +58,7 @@ slender tower profile is minimally disruptive to the skyline.
 ## maintenance schedule
 
 | Month | Task                                       | Data download    |
-| ----- | ------------------------------------------ | ---------------- |
+|-------|--------------------------------------------|------------------|
 | Jan   | clean radiometer                           | ≤ 1 mo. interval |
 | Feb   |                                            | ≤ 1 mo. interval |
 | Mar   |                                            | ≤ 1 mo. interval |
@@ -75,484 +75,245 @@ slender tower profile is minimally disruptive to the skyline.
 ## instrumentation
 
 <table>
-
 <thead>
-
 <tr>
-
 <th style="text-align:left;">
-
 instrument
-
 </th>
-
 <th style="text-align:left;">
-
 type
-
 </th>
-
 <th style="text-align:left;">
-
 mfg
-
 </th>
-
 <th style="text-align:left;">
-
 asu\#
-
 </th>
-
 <th style="text-align:left;">
-
 measures
-
 </th>
-
 <th style="text-align:left;">
-
 calibrate?
-
 </th>
-
 <th style="text-align:left;">
-
 frequency
-
 </th>
-
 <th style="text-align:left;">
-
 last calibrated - notes
-
 </th>
-
 </tr>
-
 </thead>
-
 <tbody>
-
 <tr>
-
 <td style="text-align:left;">
-
 CSAT 3d sonic anemometer
-
 </td>
-
 <td style="text-align:left;">
-
 sensor
-
 </td>
-
 <td style="text-align:left;">
-
 Campbell
-
 </td>
-
 <td style="text-align:left;">
-
 6161057
-
 </td>
-
 <td style="text-align:left;">
-
 wind speed and direction
-
 </td>
-
 <td style="text-align:left;">
-
 yes
-
 </td>
-
 <td style="text-align:left;">
-
 3-5 y
-
 </td>
-
 <td style="text-align:left;">
-
 2017-01-13
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 Licor LI7500 (IRGA)
-
 </td>
-
 <td style="text-align:left;">
-
 sensor
-
 </td>
-
 <td style="text-align:left;">
-
 Licor
-
 </td>
-
 <td style="text-align:left;">
-
 6161058
-
 </td>
-
 <td style="text-align:left;">
-
 CO2/H2O
-
 </td>
-
 <td style="text-align:left;">
-
 yes
-
 </td>
-
 <td style="text-align:left;">
-
 annually
-
 </td>
-
 <td style="text-align:left;">
-
 2019-11-18
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 HC2S3 probe (replaced HMP45C)
-
 </td>
-
 <td style="text-align:left;">
-
 sensor
-
 </td>
-
 <td style="text-align:left;">
-
 Rotronic
-
 </td>
-
 <td style="text-align:left;">
-
 None
-
 </td>
-
 <td style="text-align:left;">
-
 Temperature and Relative Humidity
-
 </td>
-
 <td style="text-align:left;">
-
 yes
-
 </td>
-
 <td style="text-align:left;">
-
 every 2 years
-
 </td>
-
 <td style="text-align:left;">
-
 2019-12-03
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 Net radiometer (NR01)
-
 </td>
-
 <td style="text-align:left;">
-
 sensor
-
 </td>
-
 <td style="text-align:left;">
-
 Hukseflux
-
 </td>
-
 <td style="text-align:left;">
-
 None
-
 </td>
-
 <td style="text-align:left;">
-
 Energy balance
-
 </td>
-
 <td style="text-align:left;">
-
 yes
-
 </td>
-
 <td style="text-align:left;">
-
 every 2 years
-
 </td>
-
 <td style="text-align:left;">
-
 2019-08-05
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 TB4 Rain Gauge
-
 </td>
-
 <td style="text-align:left;">
-
 sensor
-
 </td>
-
 <td style="text-align:left;">
-
 Campbell
-
 </td>
-
 <td style="text-align:left;">
-
 None
-
 </td>
-
 <td style="text-align:left;">
-
 precipitation
-
 </td>
-
 <td style="text-align:left;">
-
 no
-
 </td>
-
 <td style="text-align:left;">
-
 NA
-
 </td>
-
 <td style="text-align:left;">
-
 factory calibrated so recalibration not necessary but annual field check
 is recommended
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 CR23XPB
-
 </td>
-
 <td style="text-align:left;">
-
 logger
-
 </td>
-
 <td style="text-align:left;">
-
 Campbell
-
 </td>
-
 <td style="text-align:left;">
-
 6126596
-
 </td>
-
 <td style="text-align:left;">
-
 radiation sensors and rain gage
-
 </td>
-
 <td style="text-align:left;">
-
 yes
-
 </td>
-
 <td style="text-align:left;">
-
 every 3 y per Campbell but every few years per E. Vivoni
-
 </td>
-
 <td style="text-align:left;">
-
 2020-01-24
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 CR1000
-
 </td>
-
 <td style="text-align:left;">
-
 logger
-
 </td>
-
 <td style="text-align:left;">
-
 Campbell
-
 </td>
-
 <td style="text-align:left;">
-
 Unknown
-
 </td>
-
 <td style="text-align:left;">
-
 eddy flux sensors
-
 </td>
-
 <td style="text-align:left;">
-
 yes
-
 </td>
-
 <td style="text-align:left;">
-
 NA
-
 </td>
-
 <td style="text-align:left;">
-
 2020-01-24
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 CR1000\_soil
-
 </td>
-
 <td style="text-align:left;">
-
 logger
-
 </td>
-
 <td style="text-align:left;">
-
 Campbell
-
 </td>
-
 <td style="text-align:left;">
-
 Unknown
-
 </td>
-
 <td style="text-align:left;">
-
 soil sensors
-
 </td>
-
 <td style="text-align:left;">
-
 yes
-
 </td>
-
 <td style="text-align:left;">
-
 NA
-
 </td>
-
 <td style="text-align:left;">
-
 not deployed
-
 </td>
-
 </tr>
-
 </tbody>
-
 </table>
 
 ## soil moisture calibration
@@ -575,7 +336,7 @@ laboratory experiment conducted to check the readings of the CS-616
 against measurements taken from soil samples, and thereby create a
 calibration equation specific to the soil at the Maryvale site.
 
-2.  Experimental Setup
+1.  Experimental Setup
 
 A large hole, approximately 35 cm deep, was dug at the Maryvale site
 near the location of the installed soil moisture sensors. The vertical
@@ -602,7 +363,7 @@ moisture values will be the same in all the bins at any given time. This
 avoids experimental error from removing soil from the bin being measured
 for purposes of measurement.
 
-3.  Taking Measurements
+1.  Taking Measurements
 
 Periodically, a soil moisture sample is taken from the middle of a bin
 and pressed into a sample tin such that the soil is level at the top of
@@ -615,15 +376,13 @@ determined by filling it with water and weighing it. After a sample is
 taken from a bin, dried, and measured, the soil in the tin is returned
 to the same bin.
 
-4.  Calculations
+1.  Calculations
 
-<!-- end list -->
-
-  - Mass of Empty Tin: 21 g
-  - Mass of Tin filled with Water: 155 g
-  - Mass of Water to Fill Tin: 134 g
-  - Volume of Tin: 134 cm3 (using density of water = 1 kg/L = 1 g/cm3)
-  - Volumetric water content is defined as the volume of the water in
+-   Mass of Empty Tin: 21 g
+-   Mass of Tin filled with Water: 155 g
+-   Mass of Water to Fill Tin: 134 g
+-   Volume of Tin: 134 cm3 (using density of water = 1 kg/L = 1 g/cm3)
+-   Volumetric water content is defined as the volume of the water in
     the sample divided by the total volume of the sample. Since the tin
     is filled when the sample is taken, the total volume is known. The
     volume of the water is calculated as the difference between the mass
@@ -631,7 +390,7 @@ to the same bin.
     water. θ=minitial-mdriedVtinρw
 
 | Initial Mass (g) | Sensor Reading | Drying mass (g) | Dried mass (g) | Tin mass (g) | Tin Volume (mL) | Theta    |
-| ---------------- | -------------- | --------------- | -------------- | ------------ | --------------- | -------- |
+|------------------|----------------|-----------------|----------------|--------------|-----------------|----------|
 | 288              | 0.762          | 237             | 236            | 21           | 134             | 0.38806  |
 | 280              | 0.679          | 230             | 230            | 21           | 134             | 0.373134 |
 | 272              | 0.593          | 250             | 250            | 21           | 134             | 0.164179 |
@@ -677,7 +436,7 @@ each. The instruments and data associated with each logger are
 summarized below.**
 
 | Data Logger  | Instruments                                  | Data                                                                                        |
-| ------------ | -------------------------------------------- | ------------------------------------------------------------------------------------------- |
+|--------------|----------------------------------------------|---------------------------------------------------------------------------------------------|
 | CR23X        | Hukseflux NR01 four-component net radiometer | incoming and outgoing short- and long-wave radiation (W/m2)                                 |
 |              | TB4 tipping-bucket rain gauge                | rainfall (mm)                                                                               |
 | CR1000\_Soil | CS-616 water content reflectometers (3)      | volumetric soil moisture (m3/m3) at 5, 15, and 30 cm                                        |
@@ -690,7 +449,7 @@ summarized below.**
 **CR23X: Radiometer, Rain Gauge (30 minute averages)**
 
 | Data Table Label | Units               | Description                                                                  |
-| ---------------- | ------------------- | ---------------------------------------------------------------------------- |
+|------------------|---------------------|------------------------------------------------------------------------------|
 | TIMESTAMP        | YYYY-MM-DD HH:MM:SS | logger timestamp                                                             |
 | RECORD           | \-                  | record number                                                                |
 | SR01\_up\_1\_AVG | W/m2                | upwelling shortwave radiation                                                |
@@ -711,7 +470,7 @@ summarized below.**
 heat flux plates (30 minute averages)**
 
 | Data Table Label | Units               | Description                                       |
-| ---------------- | ------------------- | ------------------------------------------------- |
+|------------------|---------------------|---------------------------------------------------|
 | TIMESTAMP        | YYYY-MM-DD HH:MM:SS | logger timestamp                                  |
 | RECORD           | \-                  | record number                                     |
 | VW\_AVG          | m3/m3               | volumetric water content, 5 cm                    |
@@ -741,7 +500,7 @@ not always accessed by the same means, especially beginning in the
 summer of 2014. CR1000\_EC 10 Hz data (“.ts” files)
 
 | Data Table Label | Units                 | Description                         |
-| ---------------- | --------------------- | ----------------------------------- |
+|------------------|-----------------------|-------------------------------------|
 | TIMESTAMP        | YYYY-MM-DD HH:MM:SS.S | logger timestamp                    |
 | RECORD           | \-                    | record number                       |
 | Ux               | m/s                   | E  W wind speed                    |
@@ -758,7 +517,7 @@ summer of 2014. CR1000\_EC 10 Hz data (“.ts” files)
 CR1000\_EC 30 min data (“.flux” files)
 
 | Data Table Label  | Units               | Description                                                       |
-| ----------------- | ------------------- | ----------------------------------------------------------------- |
+|-------------------|---------------------|-------------------------------------------------------------------|
 | TIMESTAMP         | YYYY-MM-DD HH:MM:SS | logger timestamp                                                  |
 | RECORD            | \-                  | record number                                                     |
 | Hs                | W/m2                | Sensible heat flux using sonic temperature                        |
@@ -823,1668 +582,957 @@ CR1000\_EC 30 min data (“.flux” files)
 
 ## maintenance log
 
+    ## Warning: 2 parsing failures.
+    ## row    col           expected actual                  file
+    ## 109 action delimiter or quote      L 'maintenance_log.csv'
+    ## 109 action delimiter or quote      d 'maintenance_log.csv'
+
 <table>
-
 <thead>
-
 <tr>
-
 <th style="text-align:left;">
-
 date
-
 </th>
-
 <th style="text-align:left;">
-
 action
-
 </th>
-
 </tr>
-
 </thead>
-
 <tbody>
-
 <tr>
-
 <td style="text-align:left;">
-
 2014-10-02
-
 </td>
-
 <td style="text-align:left;">
-
 10 Hz data retrieval
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 2014-10-22
-
 </td>
-
 <td style="text-align:left;">
-
 10 Hz data retrieval; unable to access radiometers this visit now
 overdue
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 2014-11-25
-
 </td>
-
 <td style="text-align:left;">
-
 10 Hz data retrieval; cleaned radiometers; HMP fell out of its housing
-while raising - not addressed\!
-
+while raising - not addressed!
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 2014-11-26
-
 </td>
-
 <td style="text-align:left;">
-
 HMP reinserted into sleeve on tower
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 2014-12-22
-
 </td>
-
 <td style="text-align:left;">
-
 data retrieval; rewired HMP45
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 2015-01-21
-
 </td>
-
 <td style="text-align:left;">
-
 data retrieval; rewired HMP45; cleaned radiometers
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 2015-02-21
-
 </td>
-
 <td style="text-align:left;">
-
 data retrieval; cleaned radiometers
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 2015-03-22
-
 </td>
-
 <td style="text-align:left;">
-
 data retrieval
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 2015-04-22
-
 </td>
-
 <td style="text-align:left;">
-
 data retrieval; cleaned radiometers
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 2015-05-22
-
 </td>
-
 <td style="text-align:left;">
-
 data retrieval; cables had come loose and were tangled in fence
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 2015-06-22
-
 </td>
-
 <td style="text-align:left;">
-
 data retrieval
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 2015-07-15
-
 </td>
-
 <td style="text-align:left;">
-
 HC2S3 probe purchased to replace HMP45C
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 2015-07-23
-
 </td>
-
 <td style="text-align:left;">
-
 data retrieval
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 2015-08-07
-
 </td>
-
 <td style="text-align:left;">
-
 cleaned radiometers; tried trouble shooting error messages; everything
 looked normal
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 2015-08-22
-
 </td>
-
 <td style="text-align:left;">
-
 data retrieval
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 2015-09-22
-
 </td>
-
 <td style="text-align:left;">
-
 data retrieval
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 2015-10-25
-
 </td>
-
 <td style="text-align:left;">
-
 data retrieval
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 2015-11-13
-
 </td>
-
 <td style="text-align:left;">
-
 Licor LI-7500 calibrated
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 2015-11-17
-
 </td>
-
 <td style="text-align:left;">
-
 reinstalled calibrated instrument; cleaned radiometers
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 2015-11-25
-
 </td>
-
 <td style="text-align:left;">
-
 data retrieval
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 2015-12-22
-
 </td>
-
 <td style="text-align:left;">
-
 data retrieval
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 2016-01-22
-
 </td>
-
 <td style="text-align:left;">
-
 data retrieval
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 2016-02-22
-
 </td>
-
 <td style="text-align:left;">
-
 data retrieval
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 2016-03-04
-
 </td>
-
 <td style="text-align:left;">
-
 cleaned radiometers
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 2016-03-22
-
 </td>
-
 <td style="text-align:left;">
-
 data retrieval
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 2016-04-23
-
 </td>
-
 <td style="text-align:left;">
-
 data retrieval
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 2016-05-02
-
 </td>
-
 <td style="text-align:left;">
-
 cables between data logger and soil sensors cut; as well as cable to the
 HC2S3 probe
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 2016-05-05
-
 </td>
-
 <td style="text-align:left;">
-
 dug up soil sensors
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 2016-05-22
-
 </td>
-
 <td style="text-align:left;">
-
 data retrieval 7:20pm
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 2016-05-26
-
 </td>
-
 <td style="text-align:left;">
-
 tower cranked down at 6pm
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 2016-05-27
-
 </td>
-
 <td style="text-align:left;">
-
 HC2S3 cable replaced; tower cranked up at 9am; discovered that one of
 the cables from the NR01 net radiometer had been disconnected (possible
 during prior vandalism)
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 2016-06-22
-
 </td>
-
 <td style="text-align:left;">
-
 data retrieval
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 2016-07-22
-
 </td>
-
 <td style="text-align:left;">
-
 cleaned radiometers
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 2016-07-26
-
 </td>
-
 <td style="text-align:left;">
-
 data retrieval
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 2016-08-22
-
 </td>
-
 <td style="text-align:left;">
-
 data retrieval
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 2016-09-22
-
 </td>
-
 <td style="text-align:left;">
-
 data retrieval 2:08pm
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 2016-10-21
-
 </td>
-
 <td style="text-align:left;">
-
 sonic anemometer and radiometer removed from the flux tower to be sent
 in for calibration next week. The IRGA and Temperature and Relative
 humidity probe (HC2SC) are still attached; but we left the tower cranked
 down; so they are measuring at a lower elevation (if that matters)
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 2016-10-21
-
 </td>
-
 <td style="text-align:left;">
-
 data retrieval 12:10pm
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 2016-11-07
-
 </td>
-
 <td style="text-align:left;">
-
 copied program from CR23X\_PB prior to removing CR23X\_PB and CR1000
 data loggers for shipping and calibration
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 2016-11-18
-
 </td>
-
 <td style="text-align:left;">
-
 Licor LI7500 removed from tower for calibration
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 2016-12-09
-
 </td>
-
 <td style="text-align:left;">
-
 Licor LI7500 reinstalled on tower
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 2016-12-11
-
 </td>
-
 <td style="text-align:left;">
-
 CR23X\_PB and CR1000(program uploaded) data loggers reinstalled and
 wired.
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 2017-01-24
-
 </td>
-
 <td style="text-align:left;">
-
 Re-installed the CSAT 3d sonic anemometer; and net radiometer
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 2017-01-26
-
 </td>
-
 <td style="text-align:left;">
-
 re wired the net radiometer to CR23X\_PB
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 2017-01-30
-
 </td>
-
 <td style="text-align:left;">
-
 CR23x\_pb program uploaded by Eli at \~14:00
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 2017-01-31
-
 </td>
-
 <td style="text-align:left;">
-
 data retrieval
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 2017-02-06
-
 </td>
-
 <td style="text-align:left;">
-
 4WPB100 Terminal Input Module installed on CR23X\_PB and tower raised
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 2017-02-28
-
 </td>
-
 <td style="text-align:left;">
-
 data retrieval
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 2017-03-31
-
 </td>
-
 <td style="text-align:left;">
-
 data retrieval. wires were loose due to wind. need to buy more Velcro
 straps
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 2017-05-02
-
 </td>
-
 <td style="text-align:left;">
-
 data retrieval
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 2017-05-30
-
 </td>
-
 <td style="text-align:left;">
-
 data retrieval
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 2017-06-28
-
 </td>
-
 <td style="text-align:left;">
-
 data retrieval
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 2017-07-27
-
 </td>
-
 <td style="text-align:left;">
-
 data retrieval
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 2017-08-28
-
 </td>
-
 <td style="text-align:left;">
-
 data retrieval
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 2017-09-28
-
 </td>
-
 <td style="text-align:left;">
-
 data retrieval
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 2017-10-27
-
 </td>
-
 <td style="text-align:left;">
-
 data retrieval
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 2017-11-29
-
 </td>
-
 <td style="text-align:left;">
-
 data retrieval
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 2017-12-07
-
 </td>
-
 <td style="text-align:left;">
-
 cleaned radiometer and removed HC2S3 sensor for recalibration with Chris
 Sanchez. left tower cranked down to \~40’
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 2017-12-12
-
 </td>
-
 <td style="text-align:left;">
-
 chris Sanchez climbed the tower and removed both the Licor li-7500 and
 control box for calibration.
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 2017-12-20
-
 </td>
-
 <td style="text-align:left;">
-
 Licor li-7500 and control box reinstalled
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 2017-12-22
-
 </td>
-
 <td style="text-align:left;">
-
 data retrieval
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 2018-01-18
-
 </td>
-
 <td style="text-align:left;">
-
 reinstalled HC2S3 sensor
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 2018-01-26
-
 </td>
-
 <td style="text-align:left;">
-
 data retrieval; cleaned radiometers
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 2018-02-27
-
 </td>
-
 <td style="text-align:left;">
-
 data retrieval; tower cranked back up to\~70’
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 2018-03-28
-
 </td>
-
 <td style="text-align:left;">
-
 data retrieval
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 2018-04-30
-
 </td>
-
 <td style="text-align:left;">
-
 data retrieval
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 2018-05-29
-
 </td>
-
 <td style="text-align:left;">
-
 data retrieval; cleaned radiometers
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 2018-06-30
-
 </td>
-
 <td style="text-align:left;">
-
 data retrieval
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 2018-07-30
-
 </td>
-
 <td style="text-align:left;">
-
 data retrieval
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 2018-08-27
-
 </td>
-
 <td style="text-align:left;">
-
 data retrieval
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 2018-09-30
-
 </td>
-
 <td style="text-align:left;">
-
 data retrieval; cleaned radiometers
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 2018-10-29
-
 </td>
-
 <td style="text-align:left;">
-
 data retrieval
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 2018-11-28
-
 </td>
-
 <td style="text-align:left;">
-
 cleaned radiometers; Licor li-7500 and control box removed; power cable
 to anemometer needs replacing: tower cranked down to \~40’
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 2018-11-29
-
 </td>
-
 <td style="text-align:left;">
-
 data retrieval
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 2018-12-05
-
 </td>
-
 <td style="text-align:left;">
-
 Licor li-7500 calibration
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 2018-12-13
-
 </td>
-
 <td style="text-align:left;">
-
 Licor li-7500 and control box reinstalled; anemometer SDM/12v cable
 detached both need to be sent into Cable for replacing
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 2018-12-21
-
 </td>
-
 <td style="text-align:left;">
-
 data retrieval
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 2019-01-25
-
 </td>
-
 <td style="text-align:left;">
-
 data retrieval
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 2019-02-11
-
 </td>
-
 <td style="text-align:left;">
-
 anemometer SDM/12v cable replaced
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 2019-03-02
-
 </td>
-
 <td style="text-align:left;">
-
 data retrieval
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 2019-04-01
-
 </td>
-
 <td style="text-align:left;">
-
 data retrieval
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 2019-05-01
-
 </td>
-
 <td style="text-align:left;">
-
 data retrieval; radiometers removed and shipped to Campbell Scientific
 for calibration
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 2019-05-31
-
 </td>
-
 <td style="text-align:left;">
-
 data retrieval
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 2019-07-01
-
 </td>
-
 <td style="text-align:left;">
-
 data retrieval
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 2019-07-30
-
 </td>
-
 <td style="text-align:left;">
-
 data retrieval
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 2019-08-28
-
 </td>
-
 <td style="text-align:left;">
-
 data retrieval; radiometer install
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 2019-09-10
-
 </td>
-
 <td style="text-align:left;">
-
 data retrieval; reinstall of 4WPB100
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 2019-10-04
-
 </td>
-
 <td style="text-align:left;">
-
 data retrieval
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 2019-10-30
-
 </td>
-
 <td style="text-align:left;">
-
 data retrieval; cleaned radiometers
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 2019-11-15
-
 </td>
-
 <td style="text-align:left;">
-
 Licor LI7500 removed from tower for calibration; power was out in the
 neighborhood when we arrived but was restored when we left about 1330
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 2019-11-18
-
 </td>
-
 <td style="text-align:left;">
-
 Licor li-7500 calibration in ISTB4; Eli Perez Ruiz; and Zac Keller were
 present
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 2019-11-19
-
 </td>
-
 <td style="text-align:left;">
-
 Licor li-7500 and control box reinstalled; HC2S3 sensor removed for
 calibration.
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 2019-12-02
-
 </td>
-
 <td style="text-align:left;">
-
 data retrieval
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 2019-12-09
-
 </td>
-
 <td style="text-align:left;">
-
 CR23X\_PB and CR1000 data loggers powered down; disconnected; and
 removed for shipping and calibration
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 2020-02-05
-
 </td>
-
 <td style="text-align:left;">
-
 CR23X\_PB and CR1000 data loggers connected and powered on
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 2020-02-07
-
 </td>
-
 <td style="text-align:left;">
-
 HC2S3 sensor re-installed; data retrieval
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 2020-02-10
-
 </td>
-
 <td style="text-align:left;">
-
 data retrieval to insure HC2S3 sensor was properly wired and sending
 data
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 2020-03-06
-
 </td>
-
 <td style="text-align:left;">
-
 data retrieval
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 2020-03-30
-
 </td>
-
 <td style="text-align:left;">
-
 data retrieval
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 2020-04-30
-
 </td>
-
 <td style="text-align:left;">
-
 data retrieval
-
 </td>
-
 </tr>
-
 <tr>
-
 <td style="text-align:left;">
-
 2020-06-01
-
 </td>
-
 <td style="text-align:left;">
-
 data retrieval
-
 </td>
-
 </tr>
-
+<tr>
+<td style="text-align:left;">
+2020-06-30
+</td>
+<td style="text-align:left;">
+data retrieval
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2020-07-31
+</td>
+<td style="text-align:left;">
+data retrieval
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2020-09-02
+</td>
+<td style="text-align:left;">
+data retrieval
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2020-09-20
+</td>
+<td style="text-align:left;">
+cleaned radiometers
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2020-10-01
+</td>
+<td style="text-align:left;">
+data retrieval
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2020-10-29
+</td>
+<td style="text-align:left;">
+data retrieval
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2020-11-30
+</td>
+<td style="text-align:left;">
+data retrieval;Licor LI7500 removed from tower for calibration
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2020-12-07
+</td>
+<td style="text-align:left;">
+Licor li-7500 calibration in ISTB4; Eli Perez Ruiz 2020-12-08,“Licor
+li-7500 and control box reinstalled 2021-01-29,”data retrieval
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2021-02-08
+</td>
+<td style="text-align:left;">
+adjusted and cleaned radiometers
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2021-02-12
+</td>
+<td style="text-align:left;">
+data retrieval CR23X\_PB
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2021-02-25
+</td>
+<td style="text-align:left;">
+data retrieval
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2021-03-29
+</td>
+<td style="text-align:left;">
+data retrieval
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2021-04-12
+</td>
+<td style="text-align:left;">
+cleaned radiometers
+</td>
+</tr>
 </tbody>
-
 </table>

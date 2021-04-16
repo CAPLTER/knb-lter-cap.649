@@ -1,0 +1,2614 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style type="text/css">
+@font-face {
+font-family: octicons-link;
+src: url(data:font/woff;charset=utf-8;base64,d09GRgABAAAAAAZwABAAAAAACFQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABEU0lHAAAGaAAAAAgAAAAIAAAAAUdTVUIAAAZcAAAACgAAAAoAAQAAT1MvMgAAAyQAAABJAAAAYFYEU3RjbWFwAAADcAAAAEUAAACAAJThvmN2dCAAAATkAAAABAAAAAQAAAAAZnBnbQAAA7gAAACyAAABCUM+8IhnYXNwAAAGTAAAABAAAAAQABoAI2dseWYAAAFsAAABPAAAAZwcEq9taGVhZAAAAsgAAAA0AAAANgh4a91oaGVhAAADCAAAABoAAAAkCA8DRGhtdHgAAAL8AAAADAAAAAwGAACfbG9jYQAAAsAAAAAIAAAACABiATBtYXhwAAACqAAAABgAAAAgAA8ASm5hbWUAAAToAAABQgAAAlXu73sOcG9zdAAABiwAAAAeAAAAME3QpOBwcmVwAAAEbAAAAHYAAAB/aFGpk3jaTY6xa8JAGMW/O62BDi0tJLYQincXEypYIiGJjSgHniQ6umTsUEyLm5BV6NDBP8Tpts6F0v+k/0an2i+itHDw3v2+9+DBKTzsJNnWJNTgHEy4BgG3EMI9DCEDOGEXzDADU5hBKMIgNPZqoD3SilVaXZCER3/I7AtxEJLtzzuZfI+VVkprxTlXShWKb3TBecG11rwoNlmmn1P2WYcJczl32etSpKnziC7lQyWe1smVPy/Lt7Kc+0vWY/gAgIIEqAN9we0pwKXreiMasxvabDQMM4riO+qxM2ogwDGOZTXxwxDiycQIcoYFBLj5K3EIaSctAq2kTYiw+ymhce7vwM9jSqO8JyVd5RH9gyTt2+J/yUmYlIR0s04n6+7Vm1ozezUeLEaUjhaDSuXHwVRgvLJn1tQ7xiuVv/ocTRF42mNgZGBgYGbwZOBiAAFGJBIMAAizAFoAAABiAGIAznjaY2BkYGAA4in8zwXi+W2+MjCzMIDApSwvXzC97Z4Ig8N/BxYGZgcgl52BCSQKAA3jCV8CAABfAAAAAAQAAEB42mNgZGBg4f3vACQZQABIMjKgAmYAKEgBXgAAeNpjYGY6wTiBgZWBg2kmUxoDA4MPhGZMYzBi1AHygVLYQUCaawqDA4PChxhmh/8ODDEsvAwHgMKMIDnGL0x7gJQCAwMAJd4MFwAAAHjaY2BgYGaA4DAGRgYQkAHyGMF8NgYrIM3JIAGVYYDT+AEjAwuDFpBmA9KMDEwMCh9i/v8H8sH0/4dQc1iAmAkALaUKLgAAAHjaTY9LDsIgEIbtgqHUPpDi3gPoBVyRTmTddOmqTXThEXqrob2gQ1FjwpDvfwCBdmdXC5AVKFu3e5MfNFJ29KTQT48Ob9/lqYwOGZxeUelN2U2R6+cArgtCJpauW7UQBqnFkUsjAY/kOU1cP+DAgvxwn1chZDwUbd6CFimGXwzwF6tPbFIcjEl+vvmM/byA48e6tWrKArm4ZJlCbdsrxksL1AwWn/yBSJKpYbq8AXaaTb8AAHja28jAwOC00ZrBeQNDQOWO//sdBBgYGRiYWYAEELEwMTE4uzo5Zzo5b2BxdnFOcALxNjA6b2ByTswC8jYwg0VlNuoCTWAMqNzMzsoK1rEhNqByEyerg5PMJlYuVueETKcd/89uBpnpvIEVomeHLoMsAAe1Id4AAAAAAAB42oWQT07CQBTGv0JBhagk7HQzKxca2sJCE1hDt4QF+9JOS0nbaaYDCQfwCJ7Au3AHj+LO13FMmm6cl7785vven0kBjHCBhfpYuNa5Ph1c0e2Xu3jEvWG7UdPDLZ4N92nOm+EBXuAbHmIMSRMs+4aUEd4Nd3CHD8NdvOLTsA2GL8M9PODbcL+hD7C1xoaHeLJSEao0FEW14ckxC+TU8TxvsY6X0eLPmRhry2WVioLpkrbp84LLQPGI7c6sOiUzpWIWS5GzlSgUzzLBSikOPFTOXqly7rqx0Z1Q5BAIoZBSFihQYQOOBEdkCOgXTOHA07HAGjGWiIjaPZNW13/+lm6S9FT7rLHFJ6fQbkATOG1j2OFMucKJJsxIVfQORl+9Jyda6Sl1dUYhSCm1dyClfoeDve4qMYdLEbfqHf3O/AdDumsjAAB42mNgYoAAZQYjBmyAGYQZmdhL8zLdDEydARfoAqIAAAABAAMABwAKABMAB///AA8AAQAAAAAAAAAAAAAAAAABAAAAAA==) format('woff');
+}
+body {
+-webkit-text-size-adjust: 100%;
+text-size-adjust: 100%;
+color: #333;
+font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+font-size: 16px;
+line-height: 1.6;
+word-wrap: break-word;
+}
+a {
+background-color: transparent;
+}
+a:active,
+a:hover {
+outline: 0;
+}
+strong {
+font-weight: bold;
+}
+h1 {
+font-size: 2em;
+margin: 0.67em 0;
+}
+img {
+border: 0;
+}
+hr {
+box-sizing: content-box;
+height: 0;
+}
+pre {
+overflow: auto;
+}
+code,
+kbd,
+pre {
+font-family: monospace, monospace;
+font-size: 1em;
+}
+input {
+color: inherit;
+font: inherit;
+margin: 0;
+}
+html input[disabled] {
+cursor: default;
+}
+input {
+line-height: normal;
+}
+input[type="checkbox"] {
+box-sizing: border-box;
+padding: 0;
+}
+table {
+border-collapse: collapse;
+border-spacing: 0;
+}
+td,
+th {
+padding: 0;
+}
+* {
+box-sizing: border-box;
+}
+input {
+font: 13px / 1.4 Helvetica, arial, nimbussansl, liberationsans, freesans, clean, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+a {
+color: #4078c0;
+text-decoration: none;
+}
+a:hover,
+a:active {
+text-decoration: underline;
+}
+hr {
+height: 0;
+margin: 15px 0;
+overflow: hidden;
+background: transparent;
+border: 0;
+border-bottom: 1px solid #ddd;
+}
+hr:before {
+display: table;
+content: "";
+}
+hr:after {
+display: table;
+clear: both;
+content: "";
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+margin-top: 15px;
+margin-bottom: 15px;
+line-height: 1.1;
+}
+h1 {
+font-size: 30px;
+}
+h2 {
+font-size: 21px;
+}
+h3 {
+font-size: 16px;
+}
+h4 {
+font-size: 14px;
+}
+h5 {
+font-size: 12px;
+}
+h6 {
+font-size: 11px;
+}
+blockquote {
+margin: 0;
+}
+ul,
+ol {
+padding: 0;
+margin-top: 0;
+margin-bottom: 0;
+}
+ol ol,
+ul ol {
+list-style-type: lower-roman;
+}
+ul ul ol,
+ul ol ol,
+ol ul ol,
+ol ol ol {
+list-style-type: lower-alpha;
+}
+dd {
+margin-left: 0;
+}
+code {
+font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+font-size: 12px;
+}
+pre {
+margin-top: 0;
+margin-bottom: 0;
+font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+.select::-ms-expand {
+opacity: 0;
+}
+.octicon {
+font: normal normal normal 16px/1 octicons-link;
+display: inline-block;
+text-decoration: none;
+text-rendering: auto;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+}
+.octicon-link:before {
+content: '\f05c';
+}
+.markdown-body:before {
+display: table;
+content: "";
+}
+.markdown-body:after {
+display: table;
+clear: both;
+content: "";
+}
+.markdown-body>*:first-child {
+margin-top: 0 !important;
+}
+.markdown-body>*:last-child {
+margin-bottom: 0 !important;
+}
+a:not([href]) {
+color: inherit;
+text-decoration: none;
+}
+.anchor {
+display: inline-block;
+padding-right: 2px;
+margin-left: -18px;
+}
+.anchor:focus {
+outline: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+margin-top: 1em;
+margin-bottom: 16px;
+font-weight: bold;
+line-height: 1.4;
+}
+h1 .octicon-link,
+h2 .octicon-link,
+h3 .octicon-link,
+h4 .octicon-link,
+h5 .octicon-link,
+h6 .octicon-link {
+color: #000;
+vertical-align: middle;
+visibility: hidden;
+}
+h1:hover .anchor,
+h2:hover .anchor,
+h3:hover .anchor,
+h4:hover .anchor,
+h5:hover .anchor,
+h6:hover .anchor {
+text-decoration: none;
+}
+h1:hover .anchor .octicon-link,
+h2:hover .anchor .octicon-link,
+h3:hover .anchor .octicon-link,
+h4:hover .anchor .octicon-link,
+h5:hover .anchor .octicon-link,
+h6:hover .anchor .octicon-link {
+visibility: visible;
+}
+h1 {
+padding-bottom: 0.3em;
+font-size: 2.25em;
+line-height: 1.2;
+border-bottom: 1px solid #eee;
+}
+h1 .anchor {
+line-height: 1;
+}
+h2 {
+padding-bottom: 0.3em;
+font-size: 1.75em;
+line-height: 1.225;
+border-bottom: 1px solid #eee;
+}
+h2 .anchor {
+line-height: 1;
+}
+h3 {
+font-size: 1.5em;
+line-height: 1.43;
+}
+h3 .anchor {
+line-height: 1.2;
+}
+h4 {
+font-size: 1.25em;
+}
+h4 .anchor {
+line-height: 1.2;
+}
+h5 {
+font-size: 1em;
+}
+h5 .anchor {
+line-height: 1.1;
+}
+h6 {
+font-size: 1em;
+color: #777;
+}
+h6 .anchor {
+line-height: 1.1;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table,
+pre {
+margin-top: 0;
+margin-bottom: 16px;
+}
+hr {
+height: 4px;
+padding: 0;
+margin: 16px 0;
+background-color: #e7e7e7;
+border: 0 none;
+}
+ul,
+ol {
+padding-left: 2em;
+}
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+margin-top: 0;
+margin-bottom: 0;
+}
+li>p {
+margin-top: 16px;
+}
+dl {
+padding: 0;
+}
+dl dt {
+padding: 0;
+margin-top: 16px;
+font-size: 1em;
+font-style: italic;
+font-weight: bold;
+}
+dl dd {
+padding: 0 16px;
+margin-bottom: 16px;
+}
+blockquote {
+padding: 0 15px;
+color: #777;
+border-left: 4px solid #ddd;
+}
+blockquote>:first-child {
+margin-top: 0;
+}
+blockquote>:last-child {
+margin-bottom: 0;
+}
+table {
+display: block;
+width: 100%;
+overflow: auto;
+word-break: normal;
+word-break: keep-all;
+}
+table th {
+font-weight: bold;
+}
+table th,
+table td {
+padding: 6px 13px;
+border: 1px solid #ddd;
+}
+table tr {
+background-color: #fff;
+border-top: 1px solid #ccc;
+}
+table tr:nth-child(2n) {
+background-color: #f8f8f8;
+}
+img {
+max-width: 100%;
+box-sizing: content-box;
+background-color: #fff;
+}
+code {
+padding: 0;
+padding-top: 0.2em;
+padding-bottom: 0.2em;
+margin: 0;
+font-size: 85%;
+background-color: rgba(0,0,0,0.04);
+border-radius: 3px;
+}
+code:before,
+code:after {
+letter-spacing: -0.2em;
+content: "\00a0";
+}
+pre>code {
+padding: 0;
+margin: 0;
+font-size: 100%;
+word-break: normal;
+white-space: pre;
+background: transparent;
+border: 0;
+}
+.highlight {
+margin-bottom: 16px;
+}
+.highlight pre,
+pre {
+padding: 16px;
+overflow: auto;
+font-size: 85%;
+line-height: 1.45;
+background-color: #f7f7f7;
+border-radius: 3px;
+}
+.highlight pre {
+margin-bottom: 0;
+word-break: normal;
+}
+pre {
+word-wrap: normal;
+}
+pre code {
+display: inline;
+max-width: initial;
+padding: 0;
+margin: 0;
+overflow: initial;
+line-height: inherit;
+word-wrap: normal;
+background-color: transparent;
+border: 0;
+}
+pre code:before,
+pre code:after {
+content: normal;
+}
+kbd {
+display: inline-block;
+padding: 3px 5px;
+font-size: 11px;
+line-height: 10px;
+color: #555;
+vertical-align: middle;
+background-color: #fcfcfc;
+border: solid 1px #ccc;
+border-bottom-color: #bbb;
+border-radius: 3px;
+box-shadow: inset 0 -1px 0 #bbb;
+}
+.pl-c {
+color: #969896;
+}
+.pl-c1,
+.pl-s .pl-v {
+color: #0086b3;
+}
+.pl-e,
+.pl-en {
+color: #795da3;
+}
+.pl-s .pl-s1,
+.pl-smi {
+color: #333;
+}
+.pl-ent {
+color: #63a35c;
+}
+.pl-k {
+color: #a71d5d;
+}
+.pl-pds,
+.pl-s,
+.pl-s .pl-pse .pl-s1,
+.pl-sr,
+.pl-sr .pl-cce,
+.pl-sr .pl-sra,
+.pl-sr .pl-sre {
+color: #183691;
+}
+.pl-v {
+color: #ed6a43;
+}
+.pl-id {
+color: #b52a1d;
+}
+.pl-ii {
+background-color: #b52a1d;
+color: #f8f8f8;
+}
+.pl-sr .pl-cce {
+color: #63a35c;
+font-weight: bold;
+}
+.pl-ml {
+color: #693a17;
+}
+.pl-mh,
+.pl-mh .pl-en,
+.pl-ms {
+color: #1d3e81;
+font-weight: bold;
+}
+.pl-mq {
+color: #008080;
+}
+.pl-mi {
+color: #333;
+font-style: italic;
+}
+.pl-mb {
+color: #333;
+font-weight: bold;
+}
+.pl-md {
+background-color: #ffecec;
+color: #bd2c00;
+}
+.pl-mi1 {
+background-color: #eaffea;
+color: #55a532;
+}
+.pl-mdr {
+color: #795da3;
+font-weight: bold;
+}
+.pl-mo {
+color: #1d3e81;
+}
+kbd {
+display: inline-block;
+padding: 3px 5px;
+font: 11px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+line-height: 10px;
+color: #555;
+vertical-align: middle;
+background-color: #fcfcfc;
+border: solid 1px #ccc;
+border-bottom-color: #bbb;
+border-radius: 3px;
+box-shadow: inset 0 -1px 0 #bbb;
+}
+.task-list-item {
+list-style-type: none;
+}
+.task-list-item+.task-list-item {
+margin-top: 3px;
+}
+.task-list-item input {
+margin: 0 0.35em 0.25em -1.6em;
+vertical-align: middle;
+}
+:checked+.radio-label {
+z-index: 1;
+position: relative;
+border-color: #4078c0;
+}
+.sourceLine {
+display: inline-block;
+}
+code .kw { color: #000000; }
+code .dt { color: #ed6a43; }
+code .dv { color: #009999; }
+code .bn { color: #009999; }
+code .fl { color: #009999; }
+code .ch { color: #009999; }
+code .st { color: #183691; }
+code .co { color: #969896; }
+code .ot { color: #0086b3; }
+code .al { color: #a61717; }
+code .fu { color: #63a35c; }
+code .er { color: #a61717; background-color: #e3d2d2; }
+code .wa { color: #000000; }
+code .cn { color: #008080; }
+code .sc { color: #008080; }
+code .vs { color: #183691; }
+code .ss { color: #183691; }
+code .im { color: #000000; }
+code .va {color: #008080; }
+code .cf { color: #000000; }
+code .op { color: #000000; }
+code .bu { color: #000000; }
+code .ex { color: #000000; }
+code .pp { color: #999999; }
+code .at { color: #008080; }
+code .do { color: #969896; }
+code .an { color: #008080; }
+code .cv { color: #008080; }
+code .in { color: #008080; }
+</style>
+<style>
+body {
+  box-sizing: border-box;
+  min-width: 200px;
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 45px;
+  padding-top: 0px;
+}
+</style>
+
+</head>
+
+<body>
+
+<h1 id="knb-lter-cap649">knb-lter-cap.649</h1>
+<h2 id="long-term-monitoring-maryvale-flux-tower">long-term monitoring: Maryvale flux tower</h2>
+<p>This repository houses the work flow for publishing long-term data from the CAP LTER flux tower in Phoenix, AZ.</p>
+<ul>
+<li>for project protocols see: <a href="https://github.com/CAPLTER/caplter-research-protocols/blob/master/FluxTower/FluxTower_Protocol.md">fluxtower_protocol</a></li>
+<li>for data uploading see: <a href="https://github.com/CAPLTER/fluxtower-data-processing">fluxtower-data-processing</a></li>
+</ul>
+<h2 id="outline">outline</h2>
+<ul>
+<li><a href="#overview">overview</a></li>
+<li><a href="#maintenance-schedule">maintenance schedule</a></li>
+<li><a href="#instrumentation">instrumentation</a></li>
+<li><a href="#soil-moisture-calibration">soil moisture calibration</a></li>
+<li><a href="#tower-metadata">tower metadata</a></li>
+<li><a href="#maintenance-log">maintenance log</a></li>
+</ul>
+<h2 id="overview">overview</h2>
+<p>The CAP LTER maintains a flux tower to facilitate neighborhood-scale investigations of atmospheric processes in a Phoenix, AZ suburb. Capitalizing on comprehensive measurements of energy (heat and radiation) and matter (water and carbon dioxide) exchanges between the atmosphere and the urban surface, this project adds significantly to research investigating how urbanization affects local weather, climate, and air quality. Results of this study are contributing greatly to our understanding of climate issues pertinent to urban areas, such as the urban heat island (UHI), climate forecasting, air quality, and yardscape water demands and consumption. Further, this research provides critical on-the-ground data required to validate regional climate models that influence water management and emergency planning. Ultimately, these data may contribute to urban design and management that aid the conservation of resources and ameliorate temperature extremes.</p>
+<p>An antenna-mounted array of sophisticated sensors measuring temperature, humidity, and wind speed and direction at high temporal resolutions facilitates the calculation of energy and material fluxes. This antenna-based approach has been used for similar climate observation campaigns worldwide, including those in Vancouver, Singapore, Basel, Mexico City, Tucson, and London, but this is the first long-term urban flux study in a large, arid city that we are aware. The residential setting where the tower is positioned was selected on account of the homogeneous building design (single-story, single-family, detached dwellings) representative of many neighborhoods throughout the Valley, and also due to generous technical and logistical assistance offered by the Maricopa County Air Quality Department, which maintains a separate air-quality monitoring station at the secure parcel. To avoid the influence of localized turbulence and material fluxes created by anomalous surface objects, the antenna extends vertically approximately 75 ft to sample neighborhood-scale fluxes. Though quite tall, the slender tower profile is minimally disruptive to the skyline.</p>
+<h2 id="maintenance-schedule">maintenance schedule</h2>
+<table>
+<thead>
+<tr class="header">
+<th>Month</th>
+<th>Task</th>
+<th>Data download</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Jan</td>
+<td>clean radiometer</td>
+<td>≤ 1 mo. interval</td>
+</tr>
+<tr class="even">
+<td>Feb</td>
+<td></td>
+<td>≤ 1 mo. interval</td>
+</tr>
+<tr class="odd">
+<td>Mar</td>
+<td></td>
+<td>≤ 1 mo. interval</td>
+</tr>
+<tr class="even">
+<td>Apr</td>
+<td>calibrate HMP &amp; radiometer; calibrate IRGA</td>
+<td>≤ 1 mo. interval</td>
+</tr>
+<tr class="odd">
+<td>May</td>
+<td></td>
+<td>≤ 1 mo. interval</td>
+</tr>
+<tr class="even">
+<td>Jun</td>
+<td></td>
+<td>≤ 1 mo. interval</td>
+</tr>
+<tr class="odd">
+<td>Jul</td>
+<td>clean radiometer</td>
+<td>≤ 1 mo. interval</td>
+</tr>
+<tr class="even">
+<td>Aug</td>
+<td></td>
+<td>≤ 1 mo. interval</td>
+</tr>
+<tr class="odd">
+<td>Sep</td>
+<td></td>
+<td>≤ 1 mo. interval</td>
+</tr>
+<tr class="even">
+<td>Oct</td>
+<td>clean radiometer; calibrate IRGA</td>
+<td>≤ 1 mo. interval</td>
+</tr>
+<tr class="odd">
+<td>Nov</td>
+<td></td>
+<td>≤ 1 mo. interval</td>
+</tr>
+<tr class="even">
+<td>Dec</td>
+<td></td>
+<td>≤ 1 mo. interval</td>
+</tr>
+</tbody>
+</table>
+<h2 id="instrumentation">instrumentation</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+instrument
+</th>
+<th style="text-align:left;">
+type
+</th>
+<th style="text-align:left;">
+mfg
+</th>
+<th style="text-align:left;">
+asu\#
+</th>
+<th style="text-align:left;">
+measures
+</th>
+<th style="text-align:left;">
+calibrate?
+</th>
+<th style="text-align:left;">
+frequency
+</th>
+<th style="text-align:left;">
+last calibrated - notes
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+CSAT 3d sonic anemometer
+</td>
+<td style="text-align:left;">
+sensor
+</td>
+<td style="text-align:left;">
+Campbell
+</td>
+<td style="text-align:left;">
+6161057
+</td>
+<td style="text-align:left;">
+wind speed and direction
+</td>
+<td style="text-align:left;">
+yes
+</td>
+<td style="text-align:left;">
+3-5 y
+</td>
+<td style="text-align:left;">
+2017-01-13
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Licor LI7500 (IRGA)
+</td>
+<td style="text-align:left;">
+sensor
+</td>
+<td style="text-align:left;">
+Licor
+</td>
+<td style="text-align:left;">
+6161058
+</td>
+<td style="text-align:left;">
+CO2/H2O
+</td>
+<td style="text-align:left;">
+yes
+</td>
+<td style="text-align:left;">
+annually
+</td>
+<td style="text-align:left;">
+2019-11-18
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+HC2S3 probe (replaced HMP45C)
+</td>
+<td style="text-align:left;">
+sensor
+</td>
+<td style="text-align:left;">
+Rotronic
+</td>
+<td style="text-align:left;">
+None
+</td>
+<td style="text-align:left;">
+Temperature and Relative Humidity
+</td>
+<td style="text-align:left;">
+yes
+</td>
+<td style="text-align:left;">
+every 2 years
+</td>
+<td style="text-align:left;">
+2019-12-03
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Net radiometer (NR01)
+</td>
+<td style="text-align:left;">
+sensor
+</td>
+<td style="text-align:left;">
+Hukseflux
+</td>
+<td style="text-align:left;">
+None
+</td>
+<td style="text-align:left;">
+Energy balance
+</td>
+<td style="text-align:left;">
+yes
+</td>
+<td style="text-align:left;">
+every 2 years
+</td>
+<td style="text-align:left;">
+2019-08-05
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+TB4 Rain Gauge
+</td>
+<td style="text-align:left;">
+sensor
+</td>
+<td style="text-align:left;">
+Campbell
+</td>
+<td style="text-align:left;">
+None
+</td>
+<td style="text-align:left;">
+precipitation
+</td>
+<td style="text-align:left;">
+no
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+factory calibrated so recalibration not necessary but annual field check
+is recommended
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CR23XPB
+</td>
+<td style="text-align:left;">
+logger
+</td>
+<td style="text-align:left;">
+Campbell
+</td>
+<td style="text-align:left;">
+6126596
+</td>
+<td style="text-align:left;">
+radiation sensors and rain gage
+</td>
+<td style="text-align:left;">
+yes
+</td>
+<td style="text-align:left;">
+every 3 y per Campbell but every few years per E. Vivoni
+</td>
+<td style="text-align:left;">
+2020-01-24
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CR1000
+</td>
+<td style="text-align:left;">
+logger
+</td>
+<td style="text-align:left;">
+Campbell
+</td>
+<td style="text-align:left;">
+Unknown
+</td>
+<td style="text-align:left;">
+eddy flux sensors
+</td>
+<td style="text-align:left;">
+yes
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+2020-01-24
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CR1000\_soil
+</td>
+<td style="text-align:left;">
+logger
+</td>
+<td style="text-align:left;">
+Campbell
+</td>
+<td style="text-align:left;">
+Unknown
+</td>
+<td style="text-align:left;">
+soil sensors
+</td>
+<td style="text-align:left;">
+yes
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+not deployed
+</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="soil-moisture-calibration">soil moisture calibration</h2>
+<p><em>ASU Hydrology Laboratory and CAP LTER</em></p>
+<p><em>Maryvale Soil Moisture Calibration Documentation</em></p>
+<p>I. Overview</p>
+<p>In January 2012, the site of the Maryvale (WPHX) flux tower was instrumented with three CS-616 Water Content Reflectometers, measuring volumetric water content (m3/m3) of the soil at 5, 15, and 30 cm. The soil moisture values seen are suspiciously high, with a maximum value of nearly 0.8, while the maximum value at saturation should equal the porosity of the soil (~0.4). This is possible due to the high clay composition of the soil; the default calibration equations for the CS-616 assumes clay content under 30%. This document therefore details a laboratory experiment conducted to check the readings of the CS-616 against measurements taken from soil samples, and thereby create a calibration equation specific to the soil at the Maryvale site.</p>
+<ol style="list-style-type: decimal">
+<li>Experimental Setup</li>
+</ol>
+<p>A large hole, approximately 35 cm deep, was dug at the Maryvale site near the location of the installed soil moisture sensors. The vertical column was mixed thoroughly to simulate the mixed soil placed on top of the soil moisture sensors as they were being buried. 10 cm of the mixed soil was then placed in each of 7 medium-sized gray plastic bins, tamped periodically by hand and by foot. In one of the seven, a CS-616 was installed at 5 cm. It is assumed that all seven bins have roughly the same amount of soil, and the soil is of approximately the same composition across the seven, and this composition is similar to the soil column of the installed field sensors.</p>
+<p>Water was added to the seven bins until each was saturated. They were allowed to equilibrate, and then resaturated. This process was repeated until each bin showed significant standing water after equilibration. Then water was added so that each bin had exactly 10 mm of standing water. The assumption here is that all seven bins will be at saturation and will dry out at the same rate.</p>
+<p>The CS-616 in one of the seven bins was connected to a CS800 to read the data. This bin is not disturbed in the experiment, but instead samples are taken from the other six bins, under the assumption that soil moisture values will be the same in all the bins at any given time. This avoids experimental error from removing soil from the bin being measured for purposes of measurement.</p>
+<ol style="list-style-type: decimal">
+<li>Taking Measurements</li>
+</ol>
+<p>Periodically, a soil moisture sample is taken from the middle of a bin and pressed into a sample tin such that the soil is level at the top of the tin. The full tin is weighed, then placed in the oven to dry, and the volumetric soil moisture from the CS-616 is noted. The tin is then weighed again daily until the mass no longer decreases. The first measurement is taken while the soil is still saturated. Other necessary measurements include the mass of the empty tin, and its volume, as determined by filling it with water and weighing it. After a sample is taken from a bin, dried, and measured, the soil in the tin is returned to the same bin.</p>
+<ol style="list-style-type: decimal">
+<li>Calculations</li>
+</ol>
+<ul>
+<li>Mass of Empty Tin: 21 g</li>
+<li>Mass of Tin filled with Water: 155 g</li>
+<li>Mass of Water to Fill Tin: 134 g</li>
+<li>Volume of Tin: 134 cm3 (using density of water = 1 kg/L = 1 g/cm3)</li>
+<li>Volumetric water content is defined as the volume of the water in the sample divided by the total volume of the sample. Since the tin is filled when the sample is taken, the total volume is known. The volume of the water is calculated as the difference between the mass of the tin initially and after drying, divided by the density of water. θ=minitial-mdriedVtinρw</li>
+</ul>
+<table>
+<thead>
+<tr class="header">
+<th>Initial Mass (g)</th>
+<th>Sensor Reading</th>
+<th>Drying mass (g)</th>
+<th>Dried mass (g)</th>
+<th>Tin mass (g)</th>
+<th>Tin Volume (mL)</th>
+<th>Theta</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>288</td>
+<td>0.762</td>
+<td>237</td>
+<td>236</td>
+<td>21</td>
+<td>134</td>
+<td>0.38806</td>
+</tr>
+<tr class="even">
+<td>280</td>
+<td>0.679</td>
+<td>230</td>
+<td>230</td>
+<td>21</td>
+<td>134</td>
+<td>0.373134</td>
+</tr>
+<tr class="odd">
+<td>272</td>
+<td>0.593</td>
+<td>250</td>
+<td>250</td>
+<td>21</td>
+<td>134</td>
+<td>0.164179</td>
+</tr>
+<tr class="even">
+<td>255</td>
+<td>0.42</td>
+<td>245</td>
+<td>242</td>
+<td>21</td>
+<td>134</td>
+<td>0.097015</td>
+</tr>
+<tr class="odd">
+<td>258</td>
+<td>0.314</td>
+<td>240</td>
+<td>240</td>
+<td>21</td>
+<td>134</td>
+<td>0.134328</td>
+</tr>
+<tr class="even">
+<td>263</td>
+<td>0.263</td>
+<td>254</td>
+<td>254</td>
+<td>21</td>
+<td>134</td>
+<td>0.067164</td>
+</tr>
+</tbody>
+</table>
+<p>V. Conclusions and Future Work</p>
+<p>The following figure shows these theta values plotted against those taken from the sensor. A linear fit gives a relationship of θactual = 0.6239 θsensor – 0.1112. It would likely be a good idea to run the entire experiment several more times, mixing the order of the bins to reduce error resulting from differences among the six soil samples. This would still leave the experiment prone to error resulting from a difference between the sample with the sensor and all the others. Moving the sensor to a different bin would alleviate this problem.</p>
+<h2 id="tower-metadata">tower metadata</h2>
+<p><em>August 2014</em></p>
+<p><em>Thomas J. Volo</em></p>
+<p>This volume contains data from the West Phoenix/Maryvale urban eddy flux tower from its installation in December 2011 through August 27, 2014. The 23 m (73 ft) tower is located at -112.1426 W, +33.4838 N, in a xeric residential neighborhood in Maryvale, AZ, within the CAP-LTER study area. The tower is instrumented for long-term measurement of the covariance of turbulent eddy and radiative fluxes for the purposes of urban micrometeorological research. These are raw data and have not been processed at all. Winston Chow, who established the tower as a post-doc at ASU, has processed some data (2011-2012) and has a publication based on it (Chow et al., International Journal of Climatology, 2014).Those processed data are stored elsewhere. Darrel Jenerette, a CAP-LTER scientist at UC-Riverside, has a copy of this raw data and has committed to processing it. An ftp has been established for sending more recent data to Dr. Jenerette, and for transferring the processed data back to ASU for publication.</p>
+<p><strong>The tower has three data loggers, and this volume has a folder for each. The instruments and data associated with each logger are summarized below.</strong></p>
+<table>
+<thead>
+<tr class="header">
+<th>Data Logger</th>
+<th>Instruments</th>
+<th>Data</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>CR23X</td>
+<td>Hukseflux NR01 four-component net radiometer</td>
+<td>incoming and outgoing short- and long-wave radiation (W/m2)</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>TB4 tipping-bucket rain gauge</td>
+<td>rainfall (mm)</td>
+</tr>
+<tr class="odd">
+<td>CR1000_Soil</td>
+<td>CS-616 water content reflectometers (3)</td>
+<td>volumetric soil moisture (m3/m3) at 5, 15, and 30 cm</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>Hukseflux HFP01-SC heat flux plates (2)</td>
+<td>soil heat flux (W/m2) (one HFP currently not operational and uninstalled, data shows “NAN”)</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>TCAV soil thermocouples (4)</td>
+<td>soil temperature (° C)</td>
+</tr>
+<tr class="even">
+<td>CR1000_EC</td>
+<td>LI-7500 infrared gas analyzer (IRGA)</td>
+<td>CO2 and H2O concentrations (mg/m3, g/m3)</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>CSAT 3D sonic anemometer</td>
+<td>three-directional wind speed (m/s)</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>HMP45C T/RH sensor</td>
+<td>air temperature (°C) and relative humidity</td>
+</tr>
+</tbody>
+</table>
+<p><strong>CR23X: Radiometer, Rain Gauge (30 minute averages)</strong></p>
+<table>
+<thead>
+<tr class="header">
+<th>Data Table Label</th>
+<th>Units</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>TIMESTAMP</td>
+<td>YYYY-MM-DD HH:MM:SS</td>
+<td>logger timestamp</td>
+</tr>
+<tr class="even">
+<td>RECORD</td>
+<td>-</td>
+<td>record number</td>
+</tr>
+<tr class="odd">
+<td>SR01_up_1_AVG</td>
+<td>W/m2</td>
+<td>upwelling shortwave radiation</td>
+</tr>
+<tr class="even">
+<td>SR01_dn_2_AVG</td>
+<td>W/m2</td>
+<td>downwelling shortwave radiation</td>
+</tr>
+<tr class="odd">
+<td>IR01_up_3_AVG</td>
+<td>W/m2</td>
+<td>upwelling longwave (infrared) radiation</td>
+</tr>
+<tr class="even">
+<td>IR01_dn_4_AVG</td>
+<td>W/m2</td>
+<td>downwelling longwave (infrared) radiation</td>
+</tr>
+<tr class="odd">
+<td>Temp_c_AVG</td>
+<td>°C</td>
+<td>sensor temperature</td>
+</tr>
+<tr class="even">
+<td>Temp_k_AVG</td>
+<td>K</td>
+<td>sensor temperature</td>
+</tr>
+<tr class="odd">
+<td>Net_Rs_AVG</td>
+<td>W/m2</td>
+<td>net shortwave radiation</td>
+</tr>
+<tr class="even">
+<td>Net_RI_AVG</td>
+<td>W/m2</td>
+<td>net longwave (infrared) radiation</td>
+</tr>
+<tr class="odd">
+<td>Albedo_AVG</td>
+<td>-</td>
+<td>shortwave surface albedo</td>
+</tr>
+<tr class="even">
+<td>Net_total_AVG</td>
+<td>W/m2</td>
+<td>net total radiation</td>
+</tr>
+<tr class="odd">
+<td>IR01upCor_AVG</td>
+<td>W/m2</td>
+<td>upwelling longwave radiation corrected for Boltzmann radiation from sensor</td>
+</tr>
+<tr class="even">
+<td>IR-1dnCor_AVG</td>
+<td>W/m2</td>
+<td>downwelling longwave radiation corrected for Boltzmann radiation from sensor</td>
+</tr>
+<tr class="odd">
+<td>Rain_mm_TOT</td>
+<td>mm</td>
+<td>total rainfall for 30 min period</td>
+</tr>
+</tbody>
+</table>
+<p><strong>CR1000_Soil: 3 soil moisture sensors, 4 soil temperature probes, 2 heat flux plates (30 minute averages)</strong></p>
+<table>
+<thead>
+<tr class="header">
+<th>Data Table Label</th>
+<th>Units</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>TIMESTAMP</td>
+<td>YYYY-MM-DD HH:MM:SS</td>
+<td>logger timestamp</td>
+</tr>
+<tr class="even">
+<td>RECORD</td>
+<td>-</td>
+<td>record number</td>
+</tr>
+<tr class="odd">
+<td>VW_AVG</td>
+<td>m3/m3</td>
+<td>volumetric water content, 5 cm</td>
+</tr>
+<tr class="even">
+<td>VW_2_AVG</td>
+<td>m3/m3</td>
+<td>volumetric water content, 15 cm</td>
+</tr>
+<tr class="odd">
+<td>VW_3_AVG</td>
+<td>m3/m3</td>
+<td>volumetric water content, 30 cm</td>
+</tr>
+<tr class="even">
+<td>Temp_C_AVG</td>
+<td>°C</td>
+<td>soil temperature, 2 cm</td>
+</tr>
+<tr class="odd">
+<td>Temp_C_2_AVG</td>
+<td>°C</td>
+<td>soil temperature, 5 cm</td>
+</tr>
+<tr class="even">
+<td>Temp_C_3_AVG</td>
+<td>°C</td>
+<td>soil temperature, 15 cm</td>
+</tr>
+<tr class="odd">
+<td>Temp_C_4_AVG</td>
+<td>°C</td>
+<td>soil temperature, 30 cm</td>
+</tr>
+<tr class="even">
+<td>PTemp_C_AVG</td>
+<td>°C</td>
+<td>panel temperature</td>
+</tr>
+<tr class="odd">
+<td>shf_Avg</td>
+<td>W/m2</td>
+<td>soil heat flux, under gravel</td>
+</tr>
+<tr class="even">
+<td>shf_2_Avg</td>
+<td>W/m2</td>
+<td>soil heat flux, under bare soil</td>
+</tr>
+<tr class="odd">
+<td>Batt_Volt_Avg</td>
+<td>V</td>
+<td>voltage of battery</td>
+</tr>
+<tr class="even">
+<td>PA_uS_Avg</td>
+<td>μs</td>
+<td>sensor output period, 5 cm (used to calculate VW)</td>
+</tr>
+<tr class="odd">
+<td>PA_uS_2_Avg</td>
+<td>μs</td>
+<td>sensor output period, 15 cm</td>
+</tr>
+<tr class="even">
+<td>PA_uS_3_Avg</td>
+<td>μs</td>
+<td>sensor output period, 30 cm</td>
+</tr>
+</tbody>
+</table>
+<p><strong>CR1000_EC</strong>: gas analyzer, 3D sonic anemometer, temperature/relative humidity sensor</p>
+<p>Data from this sensor is stored in two types of files: 10 Hz data and 30 min averages. Each of these comes in two formats: TOB1 binary format and TOA5 readable format. The TOA5 files were converted from the TOB1 files, so time periods should coincide between the two. Time periods between the 10 Hz and 30 min data will not always coincide, since the data was not always accessed by the same means, especially beginning in the summer of 2014. CR1000_EC 10 Hz data (“.ts” files)</p>
+<table>
+<thead>
+<tr class="header">
+<th>Data Table Label</th>
+<th>Units</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>TIMESTAMP</td>
+<td>YYYY-MM-DD HH:MM:SS.S</td>
+<td>logger timestamp</td>
+</tr>
+<tr class="even">
+<td>RECORD</td>
+<td>-</td>
+<td>record number</td>
+</tr>
+<tr class="odd">
+<td>Ux</td>
+<td>m/s</td>
+<td>E  W wind speed</td>
+</tr>
+<tr class="even">
+<td>Uy</td>
+<td>m/s</td>
+<td>N  S wind speed</td>
+</tr>
+<tr class="odd">
+<td>Uz</td>
+<td>m/s</td>
+<td>upward wind speed</td>
+</tr>
+<tr class="even">
+<td>Ts</td>
+<td>°C</td>
+<td>virtual temperature from anemometer</td>
+</tr>
+<tr class="odd">
+<td>co2</td>
+<td>mg/m3</td>
+<td>CO2 concentration of air</td>
+</tr>
+<tr class="even">
+<td>h2o</td>
+<td>g/m3</td>
+<td>water vapor concentration of air</td>
+</tr>
+<tr class="odd">
+<td>press</td>
+<td>kPa</td>
+<td>air pressure</td>
+</tr>
+<tr class="even">
+<td>diag_csat</td>
+<td>-</td>
+<td>value for diagnosing CSAT problems</td>
+</tr>
+<tr class="odd">
+<td>t_hmp</td>
+<td>°C</td>
+<td>air temperature from T/RH sensor</td>
+</tr>
+<tr class="even">
+<td>e_hmp</td>
+<td>kPa</td>
+<td>vapor pressure from T/RH sensor</td>
+</tr>
+</tbody>
+</table>
+<p>CR1000_EC 30 min data (“.flux” files)</p>
+<table>
+<thead>
+<tr class="header">
+<th>Data Table Label</th>
+<th>Units</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>TIMESTAMP</td>
+<td>YYYY-MM-DD HH:MM:SS</td>
+<td>logger timestamp</td>
+</tr>
+<tr class="even">
+<td>RECORD</td>
+<td>-</td>
+<td>record number</td>
+</tr>
+<tr class="odd">
+<td>Hs</td>
+<td>W/m2</td>
+<td>Sensible heat flux using sonic temperature</td>
+</tr>
+<tr class="even">
+<td>Fc_wpl</td>
+<td>mg/m2s</td>
+<td>CO2 flux with Webb correction term</td>
+</tr>
+<tr class="odd">
+<td>LE_wpl</td>
+<td>W/m2</td>
+<td>Latent heat flux with Webb correction term</td>
+</tr>
+<tr class="even">
+<td>Hc</td>
+<td>W/m2</td>
+<td>Sensible heat flux computed from Hs and LE_wpl</td>
+</tr>
+<tr class="odd">
+<td>tau</td>
+<td>kg/ms2</td>
+<td>momentum flux</td>
+</tr>
+<tr class="even">
+<td>u_star</td>
+<td>m/s</td>
+<td>friction velocity</td>
+</tr>
+<tr class="odd">
+<td>Ts_mean</td>
+<td>°C</td>
+<td>average virtual temperature from anemometer</td>
+</tr>
+<tr class="even">
+<td>stdev_Ts</td>
+<td>°C</td>
+<td>standard deviation of Ts</td>
+</tr>
+<tr class="odd">
+<td>cov_Ts_Ux</td>
+<td>m°C/s</td>
+<td>covariance: Ts and Ux</td>
+</tr>
+<tr class="even">
+<td>cov_Ts_Uy</td>
+<td>m °C/s</td>
+<td>covariance: Ts and Uy</td>
+</tr>
+<tr class="odd">
+<td>cov_Ts_Uz</td>
+<td>m °C/s</td>
+<td>covariance: Ts and Uz</td>
+</tr>
+<tr class="even">
+<td>co2_mean</td>
+<td>mg/m3</td>
+<td>average CO2 concentration</td>
+</tr>
+<tr class="odd">
+<td>stdev_co2</td>
+<td>mg/m3</td>
+<td>standard deviation of CO2 concentration</td>
+</tr>
+<tr class="even">
+<td>cov_co2_Ux</td>
+<td>mg/m2s</td>
+<td>covariance: co2 and Ux</td>
+</tr>
+<tr class="odd">
+<td>cov_co2_Uy</td>
+<td>mg/m2s</td>
+<td>covariance: co2 and Uy</td>
+</tr>
+<tr class="even">
+<td>cov_co2_Uz</td>
+<td>mg/m2s</td>
+<td>covariance: co2 and Uz</td>
+</tr>
+<tr class="odd">
+<td>h2o_Avg</td>
+<td>g/m3</td>
+<td>average H2O concentration (IRGA)</td>
+</tr>
+<tr class="even">
+<td>stdev_h2o</td>
+<td>g/m3</td>
+<td>standard deviation of H2O concentration</td>
+</tr>
+<tr class="odd">
+<td>cov_h2o_Ux</td>
+<td>g/m2s</td>
+<td>covariance: h2o and Ux</td>
+</tr>
+<tr class="even">
+<td>cov_h2o_Uy</td>
+<td>g/m2s</td>
+<td>covariance: h2o and Uy</td>
+</tr>
+<tr class="odd">
+<td>cov_h2o_Uz</td>
+<td>g/m2s</td>
+<td>covariance: h2o and Uz</td>
+</tr>
+<tr class="even">
+<td>Ux_Avg</td>
+<td>m/s</td>
+<td>average E  W wind speed</td>
+</tr>
+<tr class="odd">
+<td>stdev_Ux</td>
+<td>m/s</td>
+<td>standard deviation of E  W wind speed</td>
+</tr>
+<tr class="even">
+<td>cov_Ux_Uy</td>
+<td>(m/s)2</td>
+<td>covariance: Ux and Uy</td>
+</tr>
+<tr class="odd">
+<td>cov_Ux_Uz</td>
+<td>(m/s)2</td>
+<td>covariance: Ux and Uz</td>
+</tr>
+<tr class="even">
+<td>Uy_Avg</td>
+<td>m/s</td>
+<td>average N  S wind speed</td>
+</tr>
+<tr class="odd">
+<td>stdev_Uy</td>
+<td>m/s</td>
+<td>standard deviation of N  S wind speed</td>
+</tr>
+<tr class="even">
+<td>cov_Uy_Uz</td>
+<td>(m/s)2</td>
+<td>covariance: Uy and Uz</td>
+</tr>
+<tr class="odd">
+<td>Uz_Avg</td>
+<td>m/s</td>
+<td>average upward wind speed</td>
+</tr>
+<tr class="even">
+<td>stdev_Uz</td>
+<td>m/s</td>
+<td>standard deviation of upward wind speed</td>
+</tr>
+<tr class="odd">
+<td>press_mean</td>
+<td>kPa</td>
+<td>mean air pressure</td>
+</tr>
+<tr class="even">
+<td>t_hmp_mean</td>
+<td>°C</td>
+<td>mean air temperature from T/RH sensor</td>
+</tr>
+<tr class="odd">
+<td>h2o_hmp_mean</td>
+<td>g/m3</td>
+<td>mean vapor density from T/RH sensor</td>
+</tr>
+<tr class="even">
+<td>rho_a_mean</td>
+<td>kg/m3</td>
+<td>mean air density</td>
+</tr>
+<tr class="odd">
+<td>wnd_dir_compass</td>
+<td>degrees</td>
+<td>wind direction (compass) corrected for azimuth</td>
+</tr>
+<tr class="even">
+<td>wnd_dir_csat3</td>
+<td>degrees</td>
+<td>wind direction with reference to CSAT field of view</td>
+</tr>
+<tr class="odd">
+<td>wnd_spd</td>
+<td>m/s</td>
+<td>mean wind speed</td>
+</tr>
+<tr class="even">
+<td>rslt_wnd_spd</td>
+<td>m/s</td>
+<td>average wind speed in compass coordinate system</td>
+</tr>
+<tr class="odd">
+<td>std_wnd_dir</td>
+<td>degrees</td>
+<td>standard deviation of wind direction in compass coordinate system</td>
+</tr>
+<tr class="even">
+<td>Fc_irga</td>
+<td>mg/m2s</td>
+<td>CO2 flux without Webb correction term</td>
+</tr>
+<tr class="odd">
+<td>LE_irga</td>
+<td>W/m2</td>
+<td>latent heat flux without Webb correction term</td>
+</tr>
+<tr class="even">
+<td>co2_wpl_LE</td>
+<td>mg/m2s</td>
+<td>Webb correction term for CO2 flux due to latent heat flux</td>
+</tr>
+<tr class="odd">
+<td>co2_wpl_H</td>
+<td>mg/m2s</td>
+<td>Webb correction term for CO2 flux due to sensible heat flux</td>
+</tr>
+<tr class="even">
+<td>h2o_wpl_LE</td>
+<td>W/m2</td>
+<td>Webb correction term for H2O flux due to latent heat flux</td>
+</tr>
+<tr class="odd">
+<td>h2o_wpl_H</td>
+<td>W/m2</td>
+<td>Webb correction term for H2O flux due to sensible heat flux</td>
+</tr>
+<tr class="even">
+<td>n_Tot</td>
+<td>samples</td>
+<td>number of samples in averaging period</td>
+</tr>
+<tr class="odd">
+<td>csat_warnings</td>
+<td>samples</td>
+<td>number of samples with CSAT flags</td>
+</tr>
+<tr class="even">
+<td>irga_warnings</td>
+<td>samples</td>
+<td>number of samples with IRGA flags</td>
+</tr>
+<tr class="odd">
+<td>del_T_f_Tot</td>
+<td>samples</td>
+<td>number of samples with delta temperature flags</td>
+</tr>
+<tr class="even">
+<td>sig_lck_f_Tot</td>
+<td>samples</td>
+<td>number of samples with poor signal lock flags</td>
+</tr>
+<tr class="odd">
+<td>amp_h_f_Tot</td>
+<td>samples</td>
+<td>number of samples with amplitude high flags</td>
+</tr>
+<tr class="even">
+<td>amp_l_f_Tot</td>
+<td>samples</td>
+<td>number of samples with amplitude low flags</td>
+</tr>
+<tr class="odd">
+<td>chopper_f_Tot</td>
+<td>samples</td>
+<td>number of samples with chopper warning flags</td>
+</tr>
+<tr class="even">
+<td>detector_f_Tot</td>
+<td>samples</td>
+<td>number of samples with detector warning flags</td>
+</tr>
+<tr class="odd">
+<td>pll_f_Tot</td>
+<td>samples</td>
+<td>number of samples with PLL warning flags</td>
+</tr>
+<tr class="even">
+<td>sync_f_Tot</td>
+<td>samples</td>
+<td>number of samples with synchronization flags</td>
+</tr>
+<tr class="odd">
+<td>agc_Avg</td>
+<td>-</td>
+<td>automatic gain control</td>
+</tr>
+<tr class="even">
+<td>panel_temp_Avg</td>
+<td>°C</td>
+<td>datalogger panel temperature</td>
+</tr>
+<tr class="odd">
+<td>batt_v#olt_Avg</td>
+<td>V</td>
+<td>battery voltage</td>
+</tr>
+</tbody>
+</table>
+<h2 id="maintenance-log">maintenance log</h2>
+<pre><code>## Warning: 2 parsing failures.
+## row    col           expected actual                  file
+## 109 action delimiter or quote      L &#39;maintenance_log.csv&#39;
+## 109 action delimiter or quote      d &#39;maintenance_log.csv&#39;</code></pre>
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+date
+</th>
+<th style="text-align:left;">
+action
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+2014-10-02
+</td>
+<td style="text-align:left;">
+10 Hz data retrieval
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2014-10-22
+</td>
+<td style="text-align:left;">
+10 Hz data retrieval; unable to access radiometers this visit now
+overdue
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2014-11-25
+</td>
+<td style="text-align:left;">
+10 Hz data retrieval; cleaned radiometers; HMP fell out of its housing
+while raising - not addressed!
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2014-11-26
+</td>
+<td style="text-align:left;">
+HMP reinserted into sleeve on tower
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2014-12-22
+</td>
+<td style="text-align:left;">
+data retrieval; rewired HMP45
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2015-01-21
+</td>
+<td style="text-align:left;">
+data retrieval; rewired HMP45; cleaned radiometers
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2015-02-21
+</td>
+<td style="text-align:left;">
+data retrieval; cleaned radiometers
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2015-03-22
+</td>
+<td style="text-align:left;">
+data retrieval
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2015-04-22
+</td>
+<td style="text-align:left;">
+data retrieval; cleaned radiometers
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2015-05-22
+</td>
+<td style="text-align:left;">
+data retrieval; cables had come loose and were tangled in fence
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2015-06-22
+</td>
+<td style="text-align:left;">
+data retrieval
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2015-07-15
+</td>
+<td style="text-align:left;">
+HC2S3 probe purchased to replace HMP45C
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2015-07-23
+</td>
+<td style="text-align:left;">
+data retrieval
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2015-08-07
+</td>
+<td style="text-align:left;">
+cleaned radiometers; tried trouble shooting error messages; everything
+looked normal
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2015-08-22
+</td>
+<td style="text-align:left;">
+data retrieval
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2015-09-22
+</td>
+<td style="text-align:left;">
+data retrieval
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2015-10-25
+</td>
+<td style="text-align:left;">
+data retrieval
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2015-11-13
+</td>
+<td style="text-align:left;">
+Licor LI-7500 calibrated
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2015-11-17
+</td>
+<td style="text-align:left;">
+reinstalled calibrated instrument; cleaned radiometers
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2015-11-25
+</td>
+<td style="text-align:left;">
+data retrieval
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2015-12-22
+</td>
+<td style="text-align:left;">
+data retrieval
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2016-01-22
+</td>
+<td style="text-align:left;">
+data retrieval
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2016-02-22
+</td>
+<td style="text-align:left;">
+data retrieval
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2016-03-04
+</td>
+<td style="text-align:left;">
+cleaned radiometers
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2016-03-22
+</td>
+<td style="text-align:left;">
+data retrieval
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2016-04-23
+</td>
+<td style="text-align:left;">
+data retrieval
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2016-05-02
+</td>
+<td style="text-align:left;">
+cables between data logger and soil sensors cut; as well as cable to the
+HC2S3 probe
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2016-05-05
+</td>
+<td style="text-align:left;">
+dug up soil sensors
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2016-05-22
+</td>
+<td style="text-align:left;">
+data retrieval 7:20pm
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2016-05-26
+</td>
+<td style="text-align:left;">
+tower cranked down at 6pm
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2016-05-27
+</td>
+<td style="text-align:left;">
+HC2S3 cable replaced; tower cranked up at 9am; discovered that one of
+the cables from the NR01 net radiometer had been disconnected (possible
+during prior vandalism)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2016-06-22
+</td>
+<td style="text-align:left;">
+data retrieval
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2016-07-22
+</td>
+<td style="text-align:left;">
+cleaned radiometers
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2016-07-26
+</td>
+<td style="text-align:left;">
+data retrieval
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2016-08-22
+</td>
+<td style="text-align:left;">
+data retrieval
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2016-09-22
+</td>
+<td style="text-align:left;">
+data retrieval 2:08pm
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2016-10-21
+</td>
+<td style="text-align:left;">
+sonic anemometer and radiometer removed from the flux tower to be sent
+in for calibration next week. The IRGA and Temperature and Relative
+humidity probe (HC2SC) are still attached; but we left the tower cranked
+down; so they are measuring at a lower elevation (if that matters)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2016-10-21
+</td>
+<td style="text-align:left;">
+data retrieval 12:10pm
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2016-11-07
+</td>
+<td style="text-align:left;">
+copied program from CR23X\_PB prior to removing CR23X\_PB and CR1000
+data loggers for shipping and calibration
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2016-11-18
+</td>
+<td style="text-align:left;">
+Licor LI7500 removed from tower for calibration
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2016-12-09
+</td>
+<td style="text-align:left;">
+Licor LI7500 reinstalled on tower
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2016-12-11
+</td>
+<td style="text-align:left;">
+CR23X\_PB and CR1000(program uploaded) data loggers reinstalled and
+wired.
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2017-01-24
+</td>
+<td style="text-align:left;">
+Re-installed the CSAT 3d sonic anemometer; and net radiometer
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2017-01-26
+</td>
+<td style="text-align:left;">
+re wired the net radiometer to CR23X\_PB
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2017-01-30
+</td>
+<td style="text-align:left;">
+CR23x\_pb program uploaded by Eli at \~14:00
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2017-01-31
+</td>
+<td style="text-align:left;">
+data retrieval
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2017-02-06
+</td>
+<td style="text-align:left;">
+4WPB100 Terminal Input Module installed on CR23X\_PB and tower raised
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2017-02-28
+</td>
+<td style="text-align:left;">
+data retrieval
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2017-03-31
+</td>
+<td style="text-align:left;">
+data retrieval. wires were loose due to wind. need to buy more Velcro
+straps
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2017-05-02
+</td>
+<td style="text-align:left;">
+data retrieval
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2017-05-30
+</td>
+<td style="text-align:left;">
+data retrieval
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2017-06-28
+</td>
+<td style="text-align:left;">
+data retrieval
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2017-07-27
+</td>
+<td style="text-align:left;">
+data retrieval
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2017-08-28
+</td>
+<td style="text-align:left;">
+data retrieval
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2017-09-28
+</td>
+<td style="text-align:left;">
+data retrieval
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2017-10-27
+</td>
+<td style="text-align:left;">
+data retrieval
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2017-11-29
+</td>
+<td style="text-align:left;">
+data retrieval
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2017-12-07
+</td>
+<td style="text-align:left;">
+cleaned radiometer and removed HC2S3 sensor for recalibration with Chris
+Sanchez. left tower cranked down to \~40’
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2017-12-12
+</td>
+<td style="text-align:left;">
+chris Sanchez climbed the tower and removed both the Licor li-7500 and
+control box for calibration.
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2017-12-20
+</td>
+<td style="text-align:left;">
+Licor li-7500 and control box reinstalled
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2017-12-22
+</td>
+<td style="text-align:left;">
+data retrieval
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2018-01-18
+</td>
+<td style="text-align:left;">
+reinstalled HC2S3 sensor
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2018-01-26
+</td>
+<td style="text-align:left;">
+data retrieval; cleaned radiometers
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2018-02-27
+</td>
+<td style="text-align:left;">
+data retrieval; tower cranked back up to\~70’
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2018-03-28
+</td>
+<td style="text-align:left;">
+data retrieval
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2018-04-30
+</td>
+<td style="text-align:left;">
+data retrieval
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2018-05-29
+</td>
+<td style="text-align:left;">
+data retrieval; cleaned radiometers
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2018-06-30
+</td>
+<td style="text-align:left;">
+data retrieval
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2018-07-30
+</td>
+<td style="text-align:left;">
+data retrieval
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2018-08-27
+</td>
+<td style="text-align:left;">
+data retrieval
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2018-09-30
+</td>
+<td style="text-align:left;">
+data retrieval; cleaned radiometers
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2018-10-29
+</td>
+<td style="text-align:left;">
+data retrieval
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2018-11-28
+</td>
+<td style="text-align:left;">
+cleaned radiometers; Licor li-7500 and control box removed; power cable
+to anemometer needs replacing: tower cranked down to \~40’
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2018-11-29
+</td>
+<td style="text-align:left;">
+data retrieval
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2018-12-05
+</td>
+<td style="text-align:left;">
+Licor li-7500 calibration
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2018-12-13
+</td>
+<td style="text-align:left;">
+Licor li-7500 and control box reinstalled; anemometer SDM/12v cable
+detached both need to be sent into Cable for replacing
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2018-12-21
+</td>
+<td style="text-align:left;">
+data retrieval
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2019-01-25
+</td>
+<td style="text-align:left;">
+data retrieval
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2019-02-11
+</td>
+<td style="text-align:left;">
+anemometer SDM/12v cable replaced
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2019-03-02
+</td>
+<td style="text-align:left;">
+data retrieval
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2019-04-01
+</td>
+<td style="text-align:left;">
+data retrieval
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2019-05-01
+</td>
+<td style="text-align:left;">
+data retrieval; radiometers removed and shipped to Campbell Scientific
+for calibration
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2019-05-31
+</td>
+<td style="text-align:left;">
+data retrieval
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2019-07-01
+</td>
+<td style="text-align:left;">
+data retrieval
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2019-07-30
+</td>
+<td style="text-align:left;">
+data retrieval
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2019-08-28
+</td>
+<td style="text-align:left;">
+data retrieval; radiometer install
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2019-09-10
+</td>
+<td style="text-align:left;">
+data retrieval; reinstall of 4WPB100
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2019-10-04
+</td>
+<td style="text-align:left;">
+data retrieval
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2019-10-30
+</td>
+<td style="text-align:left;">
+data retrieval; cleaned radiometers
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2019-11-15
+</td>
+<td style="text-align:left;">
+Licor LI7500 removed from tower for calibration; power was out in the
+neighborhood when we arrived but was restored when we left about 1330
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2019-11-18
+</td>
+<td style="text-align:left;">
+Licor li-7500 calibration in ISTB4; Eli Perez Ruiz; and Zac Keller were
+present
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2019-11-19
+</td>
+<td style="text-align:left;">
+Licor li-7500 and control box reinstalled; HC2S3 sensor removed for
+calibration.
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2019-12-02
+</td>
+<td style="text-align:left;">
+data retrieval
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2019-12-09
+</td>
+<td style="text-align:left;">
+CR23X\_PB and CR1000 data loggers powered down; disconnected; and
+removed for shipping and calibration
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2020-02-05
+</td>
+<td style="text-align:left;">
+CR23X\_PB and CR1000 data loggers connected and powered on
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2020-02-07
+</td>
+<td style="text-align:left;">
+HC2S3 sensor re-installed; data retrieval
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2020-02-10
+</td>
+<td style="text-align:left;">
+data retrieval to insure HC2S3 sensor was properly wired and sending
+data
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2020-03-06
+</td>
+<td style="text-align:left;">
+data retrieval
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2020-03-30
+</td>
+<td style="text-align:left;">
+data retrieval
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2020-04-30
+</td>
+<td style="text-align:left;">
+data retrieval
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2020-06-01
+</td>
+<td style="text-align:left;">
+data retrieval
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2020-06-30
+</td>
+<td style="text-align:left;">
+data retrieval
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2020-07-31
+</td>
+<td style="text-align:left;">
+data retrieval
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2020-09-02
+</td>
+<td style="text-align:left;">
+data retrieval
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2020-09-20
+</td>
+<td style="text-align:left;">
+cleaned radiometers
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2020-10-01
+</td>
+<td style="text-align:left;">
+data retrieval
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2020-10-29
+</td>
+<td style="text-align:left;">
+data retrieval
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2020-11-30
+</td>
+<td style="text-align:left;">
+data retrieval;Licor LI7500 removed from tower for calibration
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2020-12-07
+</td>
+<td style="text-align:left;">
+Licor li-7500 calibration in ISTB4; Eli Perez Ruiz 2020-12-08,“Licor
+li-7500 and control box reinstalled 2021-01-29,”data retrieval
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2021-02-08
+</td>
+<td style="text-align:left;">
+adjusted and cleaned radiometers
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2021-02-12
+</td>
+<td style="text-align:left;">
+data retrieval CR23X\_PB
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2021-02-25
+</td>
+<td style="text-align:left;">
+data retrieval
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2021-03-29
+</td>
+<td style="text-align:left;">
+data retrieval
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2021-04-12
+</td>
+<td style="text-align:left;">
+cleaned radiometers
+</td>
+</tr>
+</tbody>
+</table>
+
+</body>
+</html>
